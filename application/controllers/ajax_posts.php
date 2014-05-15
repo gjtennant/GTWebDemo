@@ -2,12 +2,12 @@
 
 class Ajax_posts extends CI_Controller {
 
-	public function index()
-	{
-		$this->load->model('ajax_post');
-		$view_notes['posts'] = $this->ajax_post->get_notes();
-		$this->load->view('splash_view', $view_notes);
-	}
+	// public function index()
+	// {
+	// 	$this->load->model('ajax_post');
+	// 	$view_notes['posts'] = $this->ajax_post->get_notes();
+	// 	$this->load->view('splash_view', $view_notes);
+	// }
 	public function create()
 	{
 		//add new record in the db and return JSON format results
@@ -32,7 +32,7 @@ class Ajax_posts extends CI_Controller {
 		$this->ajax_post->delete_note($data);
 		// var_dump($data);
 		// die();
-		redirect(base_url('projects/index'));
+		redirect(base_url('projects/index')); // turn this line off once the Ajax function is working
 	}
 	
 }

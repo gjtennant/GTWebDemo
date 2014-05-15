@@ -53,8 +53,11 @@
 		<!-- End Color Clicker script -->
 
 		<script type="text/javascript">
-			$(document).ready(function(){
-			// Begin Ajax Posts script
+			$(document).ready(function()
+			{
+				var counter = 1;
+
+				// Adding a new remark
 				$('#msgbox').submit(function()
 				{
 					$.post
@@ -62,30 +65,53 @@
 						$(this).attr('action'), 
 						$(this).serialize(), 
 						function(data)
-							{
-								console.log(data);
-								$('#ajaxposts').prepend("<tr><td>" + data + "</td><td><span id='x'><a href='/ajax_posts/delete/{$key['id']}'>x</a></span></td></tr>")
-							}, 
+						{
+							console.log(data);
+							$('#ajaxposts').prepend("<tr><td>" + data + "</td><td><span id='x'><a href='/ajax_posts/delete/{$key['id']}'>x</a></span></td></tr>")
+						}, 
 						'json'
 					)
-					return false
-				}) //end of submit
+					return false;
+				}) 
 
+				// Generating a new random password
 				$('#pwgen').submit(function()
 				{
 					$.post
 					(
 						$(this).attr('action'), 
 						// $(this).serialize(), 
-						function(data)
-							{
-								console.log(data);
-								$('#ajaxposts').prepend("<tr><td>" + data + "</td><td><span id='x'><a href='/ajax_posts/delete/{$key['id']}'>x</a></span></td></tr>")
-							}, 
+						function(pw)
+						{
+							console.log(pw);
+							$('#spinnumber').text(++counter);
+							$('#newpw').text(pw);
+						}, 
 						'json'
 					)
-					return false
-				}) //end of submit
+					return false;
+				}) 
+
+				// Resetting the counter
+				$('#reset').submit(function()
+				{
+					$.post
+					(
+						$(this).attr('action'),
+						// $(this).serialize(),
+						function(pw)
+						{
+							console.log(pw);
+							counter = 1;
+							$('#spinnumber').text(counter);
+							$('#newpw').text(pw);
+						},
+						'json'
+					)
+					return false;
+				})
+
+				// Also create an Ajax function to handle deleting a remark
 
 			});  //end of document.ready
 		</script>
@@ -125,14 +151,15 @@
 					<!-- Begin Random Password Generator -->
 					<div class='col-md-4'>
 						<h4>Random Password Generator</h4>
-						<p>Spin #<?php echo $this->session->userdata('counter'); ?>:</p>
-						<h4><?php echo $pw ?></h4>
+						<p>Spin #<span id='spinnumber'>1</span>:</p>
+
+						<h4 id='newpw'><?php echo $pw ?></h4>
 
 						<!-- It would be great to make this Ajax so it doesn't reset the circle banner but instead adds circles to it -->
-						<form id='pwgen' action='projects/index' method='post'>
+						<form id='pwgen' action='projects/generate' method='post'>
 							<input type='submit' class='btn-sm btn-primary' value='Generate'>
 						</form>
-						<form action='projects/clear'>
+						<form id='reset' action='projects/generate'>
 							<input type='submit' class='btn-sm btn-success' value='Reset Counter' style='margin-top:4px;margin-bottom:4px;'>
 						</form>
 
@@ -196,7 +223,7 @@
 							<thead>
 								<tr>
 									<th>Remark</th>
-									<th>Delete</th>
+									<th>Delete</th> <!-- Make the delete function an Ajax call -->
 								</tr>
 							</thead>
 							<tbody id='ajaxposts'>
