@@ -24,15 +24,15 @@ class Ajax_posts extends CI_Controller {
 
 	}
 
-	public function delete($id)
+	public function delete()
 	{
-		
 		$this->load->model('ajax_post');
-		$data = array('id' => $id);
+		$data = array('id' => $this->input->get('id'));
+		
+		$this->ajax_post->delete_note($data);
 		// var_dump($data);
 		// die();
-		$this->ajax_post->delete_note($data);
-		
+		redirect(base_url('projects/index'));
 	}
 	
 }

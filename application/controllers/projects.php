@@ -16,17 +16,15 @@ class Projects extends CI_Controller
 			$this->session->set_userdata('counter', $temp);
 		}
 
-		$new_password = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^*[]';
-		$rand = substr(str_shuffle($new_password), 0,8);
+		$new_password = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz0123456789!@#$%^*[]';
+		$pw = substr(str_shuffle($new_password), 0,8);
 
-		$view_data = array('rand' => $rand);
+		$view_data = array('pw' => $pw);
 
 		$this->load->model('ajax_post');
 		$view_data['posts'] = $this->ajax_post->get_notes();
 
 		$this->load->view('splash_view', $view_data);
-		// var_dump($view_data);
-		// die();
 	}
 
 	public function superwide()

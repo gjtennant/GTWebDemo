@@ -28,8 +28,9 @@ class Ajax_post extends CI_Model {
 		// var_dump($data);
 		// die();
 		$query = "DELETE FROM posts WHERE id = {$data['id']}";
-	// 	var_dump($query);
-	// 	die();
+		$this->db->query($query);
+		// var_dump($query);
+		// die();
 	}
 }
 ?>
