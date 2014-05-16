@@ -2,6 +2,13 @@
 
 class Ajax_post extends CI_Model {
 
+	public function get_notes()
+		{
+			$query = "SELECT * FROM posts
+					  ORDER BY created_at DESC";
+			return $this->db->query($query)->result_array();
+		}
+
 	public function add_note($data)
 	{
 		//adds new record in the db and return JSON format results
@@ -11,26 +18,13 @@ class Ajax_post extends CI_Model {
 		$this->db->query($query);
 		return TRUE;
 
-		// redirect('/'); do this w/o ajax
-
+		// redirect('/'); to do this w/o ajax
 	}
-
-	public function get_notes()
-		{
-			$query = "SELECT * FROM posts
-					  ORDER BY created_at DESC";
-			return $this->db->query($query)->result_array();
-		}
 
 	public function delete_note($data)
 	{
-		// echo('dollar-data');
-		// var_dump($data);
-		// die();
 		$query = "DELETE FROM posts WHERE id = {$data['id']}";
 		$this->db->query($query);
-		// var_dump($query);
-		// die();
 	}
 }
 ?>

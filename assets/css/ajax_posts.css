@@ -26,17 +26,6 @@ h1 {
 	padding: 14px 15px 10px 15px;
 }
 
-.postit{
-	margin:10px 15px;
-	padding: 10px;
-	vertical-align: top;
-	display:inline-block;
-	width: 190px;
-	height: 80px;
-	overflow:scroll;
-	background-color: lightyellow;
-	border: 1px solid black
-}
 .x{
 	float:right;
 	vertical-align: top;

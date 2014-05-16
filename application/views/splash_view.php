@@ -104,10 +104,12 @@
 						function(data)
 						{
 							console.log(data);
-							$('#ajaxposts').prepend("<tr><td>" + data + "</td><td><span class='x'><a href='/ajax_posts/delete/{$key['id']}'>x</a></span></td></tr>")
+							$('#ajaxremarks').prepend("<tr><td>" + data + "</td><td><span class='x'><a href='/ajax_posts/delete/{$key['id']}'>x</a></span></td></tr>");
+							$('#inbox').val("");
 						}, 
 						'json')
 					return false;
+					// *** Also have it clear the text box - see AL project for that ***
 				}) 
 
 				// Delete a remark
@@ -147,10 +149,11 @@
 	<body>
 		<div class='container' ng-controller='angController'>
 
-			<h1>Demo Page <small>on Localhost:80</small></h1>
+			<p id='topnav'>Put a drop-down menu here or prob an li menu bar to directly access projects, bio, and Contact Me</p>
+			<h1 id='topname'>Greg Tennant <small>Santa Cruz, CA</small></h1>
 
 			<!-- Canvas for colored balls -->
-			<!-- (row with JS circles, PW generator, color clicker) -->
+			<!-- (And row with JS circles, PW generator, color clicker) -->
 			<div id='circlebox' height='500px'>
 				<div class='row'>
 					
@@ -218,10 +221,15 @@
 			<!-- Next row, with SCM page -->
 			<div class='row'>
 				<div class='col-md-3'>
-					<img src="/assets/img/screenshot_SCMS.jpg" height='150px'>
+					<a href="http://www.scms.org/">
+						<img src="/assets/img/screenshot_SCMS_2.jpg" height='150px'>
+						<p><em>See the site</em></p>
+					</a>
 				</div>
 				<div class='col-md-9'>
-					<p>Before I attended the Coding Dojo, I worked on the team that built this site.</p>
+					<p>Before I learned to code, I collaborated on a team of eight to create this public-facing web site for Santa Cruz Montessori School. </p>
+					<p>We built an entirely new site from the ground up, organizing all the information you'd need to fall in love with the school and make a solid determination to send your kids there. It was quite an undertaking.</p>
+					<p>(I also made the video on the bottom of the front page, "Experience Family Work Day 2013.")</p>
 				</div>
 			</div>
 
@@ -230,14 +238,11 @@
 				<!-- Begin Ajax Remarks -->
 				<div class='col-md-6'>
 					<h4>Like to leave a remark?</h4>
-					<h4><small>140 character limit</small></h4>
+					<h4><small>{{140 - charcount.length}} characters</small></h4>
 
 					<form id='msgbox' action='/ajax_posts/create' method='post'>
-						<textarea name='description' rows='3' cols='42' ng-model='charcount'></textarea><br>
-
-						<p>You have {{140 - charcount.length}} characters left</p>
-
-						<input class='btn btn-success btn-xs' type='submit' name='post_it' value='Post'>
+						<textarea id='inbox' name='description' rows='2' cols='83' ng-model='charcount'></textarea><br>
+						<input class='btn btn-success btn-xs' type='submit' name='remark' value='Post'>
 					</form>
 					
 					<div>
@@ -248,7 +253,7 @@
 									<th>Delete</th>
 								</tr>
 							</thead>
-							<tbody id='ajaxposts'>
+							<tbody id='ajaxremarks'>
 							<?php
 								foreach ($posts as $key)
 								{
@@ -260,7 +265,7 @@
 								}
 							?>
 								<tr>
-									<td>So you built this whole thing yourself? Impressive.</td>
+									<td>You built this whole thing yourself? Impressive.</td>
 									<td><span class='x'>x</span></td>
 								</tr>
 							</tbody>

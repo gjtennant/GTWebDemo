@@ -13,6 +13,7 @@ class Ajax_posts extends CI_Controller {
 		$data = array('description' => $description);
 
 		$this->ajax_post->add_note($data);
+		$this->ajax_post->get_notes(); // have to include this in the echo json_encode
 
 		// *** I think we also need to add another db query in which we pull out what was just entered, because right now we're only showing the real_escape_string, so it looks bad ***
 		
@@ -28,9 +29,7 @@ class Ajax_posts extends CI_Controller {
 		$data = array('id' => $this->input->get('id'));
 		
 		$this->ajax_post->delete_note($data);
-		// var_dump($data);
-		// die();
-		redirect(base_url('projects/index')); // turn this line off once the Ajax function is working
+		redirect(base_url('projects/index')); // turn this line off once the Ajax function is working(??)(but it's working now, and the line is still turned on - turning it off breaks it)
 	}
 	
 }

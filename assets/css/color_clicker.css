@@ -24,7 +24,15 @@
 }
 
 .row{
-	border-bottom: 2px solid lightgray;
+	border-bottom: 2px solid #C2C2C2;
 	padding: 10px 0px 40px 0px;
 }
 
+#topname{
+	/*display: inline-block;*/
+}
+
+#topnav{
+	float:right;
+	/*display:inline-block;*/
+}
