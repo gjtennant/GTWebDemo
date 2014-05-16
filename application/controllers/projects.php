@@ -12,9 +12,6 @@ class Projects extends CI_Controller
 		$this->load->model('ajax_post');
 		$view_data['posts'] = $this->ajax_post->get_notes();
 
-		// var_dump($view_data);
-		// die();
-
 		$this->load->view('splash_view', $view_data);
 	}
 

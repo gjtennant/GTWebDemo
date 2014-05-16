@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang='en'>
+<html lang='en' ng-app>
 	<head>
 		<meta charset='utf-8'>
 		<meta name='index' content='gregtennant contents directory'>
@@ -14,6 +14,9 @@
 
 		<!-- jQuery library -->
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+		<!-- Angular.js library -->
+		<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.5/angular.min.js'></script>
 
 		<!-- Ajax Posts style sheet link -->
 		<link rel="stylesheet" type="text/css" href="/assets/css/ajax_posts.css">
@@ -52,12 +55,46 @@
 		</script>
 		<!-- End Color Clicker script -->
 
+		<!-- Begin Ajax script -->
 		<script type="text/javascript">
 			$(document).ready(function()
 			{
 				var counter = 1;
 
-				// Adding a new remark
+				// Generate a new random password
+				$('#pwgen').submit(function()
+				{
+					$.post
+					(
+						$(this).attr('action'), 
+						function(pw)
+						{
+							console.log(pw);
+							$('#spinnumber').text(++counter);
+							$('#newpw').text(pw);
+						}, 
+						'json')
+					return false;
+				}) 
+
+				// Reset the password counter
+				$('#reset').submit(function()
+				{
+					$.post
+					(
+						$(this).attr('action'),
+						function(pw)
+						{
+							console.log(pw);
+							counter = 1;
+							$('#spinnumber').text(counter);
+							$('#newpw').text(pw);
+						},
+						'json')
+					return false;
+				})
+
+				// Add a remark
 				$('#msgbox').submit(function()
 				{
 					$.post
@@ -67,59 +104,48 @@
 						function(data)
 						{
 							console.log(data);
-							$('#ajaxposts').prepend("<tr><td>" + data + "</td><td><span id='x'><a href='/ajax_posts/delete/{$key['id']}'>x</a></span></td></tr>")
+							$('#ajaxposts').prepend("<tr><td>" + data + "</td><td><span class='x'><a href='/ajax_posts/delete/{$key['id']}'>x</a></span></td></tr>")
 						}, 
-						'json'
-					)
+						'json')
 					return false;
 				}) 
 
-				// Generating a new random password
-				$('#pwgen').submit(function()
+				// Delete a remark
+				$(document).on('click', '.delx', function()
 				{
-					$.post
+					var remark = $(this)
+					$.get
 					(
-						$(this).attr('action'), 
-						// $(this).serialize(), 
-						function(pw)
+						$(this).attr('href'),
+						$(this).serialize(),
+						function()
 						{
-							console.log(pw);
-							$('#spinnumber').text(++counter);
-							$('#newpw').text(pw);
-						}, 
-						'json'
-					)
-					return false;
-				}) 
-
-				// Resetting the counter
-				$('#reset').submit(function()
-				{
-					$.post
-					(
-						$(this).attr('action'),
-						// $(this).serialize(),
-						function(pw)
-						{
-							console.log(pw);
-							counter = 1;
-							$('#spinnumber').text(counter);
-							$('#newpw').text(pw);
-						},
-						'json'
+							var tr = $(remark).parent().parent().parent()
+							$(tr).remove()
+						}
 					)
 					return false;
 				})
+			}); 
 
-				// Also create an Ajax function to handle deleting a remark
-
-			});  //end of document.ready
 		</script>
-		<!-- End Ajax Posts script -->
+		<!-- End Ajax script -->
+
+		<!-- Angular script for character counter -->
+		<script>
+			function angController($scope)
+			{
+				$scope.countChars = function()
+				{
+					$scope.charcount = 140;
+				}
+			}
+		</script>
+		<!-- End Angular script -->
 
 	</head>
 	<body>
-		<div class='container'>
+		<div class='container' ng-controller='angController'>
 
 			<h1>Demo Page <small>on Localhost:80</small></h1>
 
@@ -140,8 +166,7 @@
 						<img src="/assets/img/superwide12.jpg" height='100px'>
 						<p><em>Javascript circles</em></p></a>
 						
-						<!-- Put superwide code page up on GitHub -->
-						<a href="https://github.com/gjtennant/javascript_circles"> 
+						<a href="https://github.com/gjtennant/javascript_circles/blob/master/superwide.html"> 
 							<img src="/assets/img/code_superwide.jpg" height='109px;'>
 							<p><em>See the code</em></p>
 						</a>
@@ -155,7 +180,6 @@
 
 						<h4 id='newpw'><?php echo $pw ?></h4>
 
-						<!-- It would be great to make this Ajax so it doesn't reset the circle banner but instead adds circles to it -->
 						<form id='pwgen' action='projects/generate' method='post'>
 							<input type='submit' class='btn-sm btn-primary' value='Generate'>
 						</form>
@@ -163,11 +187,8 @@
 							<input type='submit' class='btn-sm btn-success' value='Reset Counter' style='margin-top:4px;margin-bottom:4px;'>
 						</form>
 
-						<!-- Put WordGen up on GitHub so this link can point to it -->
 						<a href="">
 							<img src="/assets/img/code_generator.jpg" height='109px'>
-							<!-- additional paramters taken back out of the img tag:
-							 class='img-responsive' alt='Responsive image' -->
 							<p><em>See the code</em></p>
 						</a>
 					</div>
@@ -206,14 +227,15 @@
 
 			<!-- Next row, with Ajax message list -->
 			<div class='row'>
-				<!-- Begin Ajax Posts -->
+				<!-- Begin Ajax Remarks -->
 				<div class='col-md-6'>
 					<h4>Like to leave a remark?</h4>
-					<h4><small>240 character limit</small></h4>
-					<form id='msgbox' action='/ajax_posts/create' method='post'>
-						<textarea name='description' rows='3' cols='42'></textarea><br>
+					<h4><small>140 character limit</small></h4>
 
-						(Insert Angular.js counter here)<br>
+					<form id='msgbox' action='/ajax_posts/create' method='post'>
+						<textarea name='description' rows='3' cols='42' ng-model='charcount'></textarea><br>
+
+						<p>You have {{140 - charcount.length}} characters left</p>
 
 						<input class='btn btn-success btn-xs' type='submit' name='post_it' value='Post'>
 					</form>
@@ -223,7 +245,7 @@
 							<thead>
 								<tr>
 									<th>Remark</th>
-									<th>Delete</th> <!-- Make the delete function an Ajax call -->
+									<th>Delete</th>
 								</tr>
 							</thead>
 							<tbody id='ajaxposts'>
@@ -233,15 +255,19 @@
 									echo "
 										<tr>
 											<td>{$key['description']}</td>
-											<td><span id='x'><a href='/ajax_posts/delete?id={$key['id']}'>x</a></span></td>
+											<td><span class='x'><a class='delx' href='/ajax_posts/delete?id={$key['id']}'>x</a></span></td>
 										</tr>";
 								}
 							?>
+								<tr>
+									<td>So you built this whole thing yourself? Impressive.</td>
+									<td><span class='x'>x</span></td>
+								</tr>
 							</tbody>
 						</table>
 					</div>
 				</div>
-				<!-- End Ajax Posts -->
+				<!-- End Ajax Remarks -->
 			</div>
 				
 			<!-- Begin colored circles script for the top banner strip -->

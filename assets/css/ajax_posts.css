@@ -37,7 +37,7 @@ h1 {
 	background-color: lightyellow;
 	border: 1px solid black
 }
-#x{
+.x{
 	float:right;
 	vertical-align: top;
 	text-decoration: underline;
