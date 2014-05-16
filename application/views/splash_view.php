@@ -241,11 +241,11 @@
 					<h4><small>{{140 - charcount.length}} characters</small></h4>
 
 					<form id='msgbox' action='/ajax_posts/create' method='post'>
-						<textarea id='inbox' name='description' rows='2' cols='83' ng-model='charcount'></textarea><br>
+						<textarea id='inbox' name='description' rows='2' cols='84' ng-model='charcount'></textarea><br>
 						<input class='btn btn-success btn-xs' type='submit' name='remark' value='Post'>
 					</form>
 					
-					<div>
+					<div id='tablebounder'>
 						<table class='table table-striped table-hover table-condensed'>
 							<thead>
 								<tr>

@@ -13,7 +13,7 @@ class Ajax_posts extends CI_Controller {
 		$data = array('description' => $description);
 
 		$this->ajax_post->add_note($data);
-		$this->ajax_post->get_notes(); // have to include this in the echo json_encode
+		$this->ajax_post->get_notes(); // have to include this in the echo json_encode somehow
 
 		// *** I think we also need to add another db query in which we pull out what was just entered, because right now we're only showing the real_escape_string, so it looks bad ***
 		
