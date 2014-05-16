@@ -18,6 +18,9 @@
 		<!-- Angular.js library -->
 		<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.5/angular.min.js'></script>
 
+		<!-- Codeigniter style sheet link -->
+		<link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+
 		<!-- Ajax Posts style sheet link -->
 		<link rel="stylesheet" type="text/css" href="/assets/css/ajax_posts.css">
 
@@ -149,7 +152,15 @@
 	<body>
 		<div class='container' ng-controller='angController'>
 
-			<p id='topnav'>Put a drop-down menu here or prob an li menu bar to directly access projects, bio, and Contact Me</p>
+			<!-- <p id='topnav'>Put a drop-down menu here or prob an li menu bar to directly access projects, bio, and Contact Me</p> -->
+			<div id='topnav'>
+				<ul id='navlinks'>
+					<li><a href="">Projects</a></li>
+					<li><a href="http://www.linkedin.com/pub/greg-tennant/6/b44/124">Linked In</a></li>
+					<li><a href="">Contact Me</a></li>
+				</ul>
+			</div>
+
 			<h1 id='topname'>Greg Tennant <small>Santa Cruz, CA</small></h1>
 
 			<!-- Canvas for colored balls -->
@@ -223,7 +234,7 @@
 				<div class='col-md-3'>
 					<a href="http://www.scms.org/">
 						<img src="/assets/img/screenshot_SCMS_2.jpg" height='150px'>
-						<p><em>See the site</em></p>
+						<p><em>See /the site</em></p>
 					</a>
 				</div>
 				<div class='col-md-9'>
@@ -241,7 +252,7 @@
 					<h4><small>{{140 - charcount.length}} characters</small></h4>
 
 					<form id='msgbox' action='/ajax_posts/create' method='post'>
-						<textarea id='inbox' name='description' rows='2' cols='84' ng-model='charcount'></textarea><br>
+						<textarea id='inbox' name='description' rows='2' cols='98' ng-model='charcount'></textarea><br>
 						<input class='btn btn-success btn-xs' type='submit' name='remark' value='Post'>
 					</form>
 					
