@@ -18,31 +18,11 @@
 	/*box-shadow: 3px 3px 20px #303030;*/
 }
 
+
 #topnav{
-	/*border:1px solid red;*/
-	/*height: 20px;*/
 	float:right;
-	/*display: inline-block;*/
-	/*box-shadow: 3px 3px 20px #303030;*/
 }
 
-#navlinks{
-	list-style-type: none;
-}
-
-#topnav li{
-	display:inline;
-	padding:0px 10px;
-	/*box-shadow: 3px 3px 20px #4A4A4A;*/
-	/*border-radius: 10px;*/
-	border-right: 1px solid #D0D0D0;
-}
-#topnav li:last-child{
-	border-style: none;
-}
-#topnav li a:hover{
-	text-decoration: none;
-}
 
 body {
 	background-color: #fff;
@@ -67,6 +47,9 @@ h1 {
 	padding: 14px 15px 10px 15px;
 }
 
+#Mont{
+	/*margin-left: 20px;*/
+}
 
 #container{
 	margin: 10px;
