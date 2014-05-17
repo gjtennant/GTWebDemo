@@ -176,22 +176,6 @@
 			</button>
 		</div>
 
-		<div class="btn-group">
-			<button type="button" class="btn btn-default">1</button>
-			<button type="button" class="btn btn-default">2</button>
-			<div class="btn-group">
-				<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-				Dropdown
-				<span class="caret"></span>
-				</button>
-				<ul class="dropdown-menu">
-					<li><a href="#">Dropdown link (Write your own stuff here!)</a></li>
-					<li><a href="#">Dropdown link (Also here!!)</a></li>
-	          </ul>
-			</div>
-		</div>
-
-
 		<h1 id='topname'>Greg Tennant <small>Santa Cruz, CA</small></h1>
 
 		<!-- Canvas for colored balls -->
@@ -273,20 +257,6 @@
 				<p>We built an entirely new site from the ground up, organizing all the information you'd need to fall in love with the school and make a solid determination to send your kids there. It was quite an undertaking.</p>
 				<p>(I also made the video on the bottom of the front page, "Experience Family Work Day 2013.")</p>
 			</div>
-
-<div class="btn-group">
-    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-      Another Dropdown
-      <span class="caret"></span>
-    </button>
-    <ul class="dropdown-menu">
-      <li><a href="#">Dropdown link (Write your own stuff here!)</a></li>
-      <li><a href="#">Dropdown link (Also here!!)</a></li>
-    </ul>
-  </div>
-
-
-
 		</div>
 
 		<!-- Next row, with Ajax message list -->
