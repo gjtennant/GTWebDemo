@@ -30,6 +30,40 @@
 	<!-- Bootstrap script library -->
  	<script type="text/javascript" src='/assets/bootstrap-3.1.1-dist/js/bootstrap.min.js'></script>
 
+ 	<!-- Begin on hover script -->
+ 	<script type="text/javascript">
+ 		$(document).ready(function()
+ 		{
+ 			$('#trigger_color').hover(function()
+ 			{
+ 				$('.color').addClass('highlight');
+ 			},
+ 			function()
+ 			{
+ 				$('.color').removeClass('highlight');
+ 			})
+
+
+ 			$('#trigger_others').hover(function()
+ 			{
+ 				$('.other').addClass('highlight');
+ 			},
+ 			function()
+ 			{
+ 				$('.other').removeClass('highlight');
+ 			})
+
+ 			$('.swims').hover(function()
+ 			{
+ 				var aux = $(this).attr('src');
+
+ 				$(this).attr('src', $(this).attr('alt'));
+ 				$(this).attr('alt', aux);
+ 			})
+ 		})
+ 	</script>
+ 	<!-- End on hover script -->
+
 	<!-- Begin Color Clicker script -->
 	<script type="text/javascript">
 		function random_color()
@@ -100,6 +134,11 @@
 				return false;
 			})
 
+
+
+
+
+
 			// Add a remark
 			$('#msgbox').submit(function()
 			{
@@ -159,8 +198,8 @@
 				<button type='button' class='btn btn-sm btn-default dropdown-toggle' data-toggle='dropdown'>Projects<span class='caret'></span>
 				</button>
 						<ul class='dropdown-menu'>
-							<li><a href="http://www.scms.org/">Santa Cruz Montessori</a></li>
 							<li><a href="/projects/superwide">Javascript Circles</a></li>
+							<li><a href="http://www.scms.org/">Santa Cruz Montessori</a></li>
 						</ul>
 					</li>
 			</div>
@@ -179,70 +218,99 @@
 		<h1 id='topname'>Greg Tennant <small>Santa Cruz, CA</small></h1>
 
 		<!-- Canvas for colored balls -->
-		<!-- (And row with JS circles, PW generator, color clicker) -->
+		<!-- (also Row with JS circles, PW generator, color clicker) -->
 		<div id='circlebox' height='500px'>
 			<div class='row'>
 				
 				<svg id="svg" style='background-color:cyan;' height='15px' xmlns="http://www.w3.org/2000/svg"></svg>
 			
 				<h2>Hi, nice to see you</h2>
-				<p id='intro'>The things on this page are made with jQuery and Javascript. The color items I received as partly-built class exercises with errors to fix and incompletes to finish. The others I wrote from scratch.</p>
+				<p id='intro'>The things on this page are made with jQuery, Javascript and PHP. The <span class='triggerwords' id='trigger_color'>color items</span> I received as partly-built class exercises with errors to fix and incompletes to finish. The <span class='triggerwords' id='trigger_others'>others</span> I wrote from scratch.</p>
+				<p class='other'><em>See the code for this entire page at <a href="https://github.com/gjtennant/GTWebDemo"> https://github.com/gjtennant/GTWebDemo</a></em></p>
 
 				<!-- Begin Javascript circles -->
 				<div class='col-md-4'>
-					<h4>Fun with color:</h4>
-					<a href="/projects/superwide">
-					<img src="/assets/img/superwide12.jpg" height='100px'>
-					<p><em>Javascript circles</em></p></a>
-					
-					<a href="https://github.com/gjtennant/javascript_circles/blob/master/superwide.html"> 
-						<img src="/assets/img/code_superwide.jpg" height='109px;'>
-						<p><em>See the code</em></p>
-					</a>
+					<div class='color'>
+						<h4>Fun with color:</h4>
+						<a href="/projects/superwide">
+						<img src="/assets/img/superwide12.jpg" height='100px'>
+						<p><em>Javascript circles</em></p></a>
+						
+						<a href="https://github.com/gjtennant/javascript_circles/blob/master/superwide.html"> 
+							<img src="/assets/img/code_superwide.jpg" height='109px;'>
+							<p><em>See the code</em></p>
+						</a>
+					</div>
 				</div>
 				<!-- End Javascript circles -->
 
 				<!-- Begin Random Password Generator -->
 				<div class='col-md-4'>
-					<h4>Random Password Generator</h4>
-					<p>Spin #<span id='spinnumber'>1</span>:</p>
+					<div class='other'>
+						<h4>Random Password Generator</h4>
+						<p>Spin #<span id='spinnumber'>1</span>:</p>
 
-					<h4 id='newpw'><?php echo $pw ?></h4>
+						<h4 id='newpw'><?php echo $pw ?></h4>
 
-					<form id='pwgen' action='projects/generate' method='post'>
-						<input type='submit' class='btn-sm btn-primary' value='Generate'>
-					</form>
-					<form id='reset' action='projects/generate'>
-						<input type='submit' class='btn-sm btn-success' value='Reset Counter' style='margin-top:4px;margin-bottom:4px;'>
-					</form>
+						<form id='pwgen' action='projects/generate' method='post'>
+							<input type='submit' class='btn-sm btn-primary' value='Generate'>
+						</form>
+						<form id='reset' action='projects/generate'>
+							<input type='submit' class='btn-sm btn-success' value='Reset Counter' style='margin-top:4px;margin-bottom:4px;'>
+						</form>
 
-					<a href="">
-						<img src="/assets/img/code_generator.jpg" height='109px'>
-						<p><em>See the code</em></p>
-					</a>
+						<a href="">
+							<img src="/assets/img/code_generator.jpg" height='109px'>
+							<p><em>See the code</em></p>
+						</a>
+					</div>
 				</div>
 				<!-- End Random Password Generator -->
 
+
+
+
 				<!-- Begin Color Clicker -->
 				<div class='col-md-4'>
-					<h4>More fun with color</h4>
-					
-					<div id='large_box'>
-						<div class='side_box'></div>
-						<div id='middle_box'></div>
-						<div class='side_box'></div>
+					<div class='color'>
+						<h4>More fun with color</h4>
+						
+						<div id='large_box'>
+							<div class='side_box'></div>
+							<div id='middle_box'></div>
+							<div class='side_box'></div>
+						</div>
+						<br>
+						<ol>
+							<li>Clicking the big box changes color of both small and large boxes</li>
+							<li>Clicking the middle box changes the color of the big box</li>
+							<li>Clicking the left or right box changes the color of that box's siblings</li>
+						</ol>
 					</div>
-					<br>
-					<ol>
-						<li>Clicking the big box changes color of both small and large boxes</li>
-						<li>Clicking the middle box changes the color of the big box</li>
-						<li>Clicking the left or right box changes the color of that box's siblings</li>
-					</ol>
 				</div>
 				<!-- End Color Clicker -->
 
-			</div> <!-- end row -->
+			</div>
 		</div> <!-- end circle-generating div and first row -->
+
+		<!-- Next row, with on.hover swimsuits -->
+		<div class='row'>
+			<div class='other'>
+				<div class="swimholder">
+					<img class='swims' src="/assets/img/wom1front.png" alt="/assets/img/wom1back.png">
+				</div>
+				<div class="swimholder">
+					<img class='swims' src="/assets/img/wom2front.png" alt="/assets/img/wom2back.png">
+				</div>
+				<div class='swimholder'>
+					<img class='swims' src="/assets/img/wom3front.png" alt='/assets/img/wom3back.png'>
+				</div>
+				<div class='swimholder'>
+					<img class='swims' src='/assets/img/wom4front.png' alt='/assets/img/wom4back.png'>
+				</div>
+				<p><em>See the code</em></p>
+			</div>
+		</div>
 
 		<!-- Next row, with SCM page -->
 		<div class='row'>
@@ -261,49 +329,49 @@
 
 		<!-- Next row, with Ajax message list -->
 		<div class='row'>
-			<!-- Begin Ajax Remarks -->
-			<div class='col-md-6'>
-				<h4>Like to leave a remark?</h4>
-				<h4><small>{{140 - charcount.length}} characters</small></h4>
+			<div class='other'>
+				<!-- Begin Ajax Remarks -->
+				<div class='col-md-6'>
+					<h4>Like to leave a remark?</h4>
+					<h4><small>{{140 - charcount.length}} characters</small></h4>
 
-				<form id='msgbox' action='/ajax_posts/create' method='post'>
-					<textarea id='inbox' name='description' rows='2' cols='98' ng-model='charcount'></textarea><br>
-					<input class='btn btn-success btn-xs' type='submit' name='remark' value='Post'>
-				</form>
-				
-				<div id='tablebounder'>
-					<table class='table table-striped table-hover table-condensed'>
-						<thead>
-							<tr>
-								<th>Remark</th>
-								<th>Delete</th>
-							</tr>
-						</thead>
-						<tbody id='ajaxremarks'>
-						<?php
-							foreach ($posts as $key)
-							{
-								echo "
-									<tr>
-										<td>{$key['description']}</td>
-										<td><span class='x'><a class='delx' href='/ajax_posts/delete?id={$key['id']}'>x</a></span></td>
-									</tr>";
-							}
-						?>
-							<tr>
-								<td>You built this whole thing yourself? Impressive.</td>
-								<td><span class='x'>x</span></td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
+					<form id='msgbox' action='/ajax_posts/create' method='post'>
+						<textarea id='inbox' name='description' rows='2' cols='98' ng-model='charcount'></textarea><br>
+						<input class='btn btn-success btn-xs' type='submit' name='remark' value='Post'>
+					</form>
+					<div id='tablebounder'>
+						<table class='table table-striped table-hover table-condensed'>
+							<thead>
+								<tr>
+									<th>Remark</th>
+									<th>Delete</th>
+								</tr>
+							</thead>
+							<tbody id='ajaxremarks'>
+							<?php
+								foreach ($posts as $key)
+								{
+									echo "
+										<tr>
+											<td>{$key['description']}</td>
+											<td><span class='x'><a class='delx' href='/ajax_posts/delete?id={$key['id']}'>x</a></span></td>
+										</tr>";
+								}
+							?>
+								<tr>
+									<td>You built this whole thing yourself? Impressive.</td>
+									<td><span class='x'>x</span></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
 			</div>
-			<!-- End Ajax Remarks -->
+				</div>
+				<!-- End Ajax Remarks -->
 		</div>
 
-
-			
 		<!-- Begin colored circles script for the top banner strip -->
+	<!-- commenting this out for now to save battery power
 		<script>
 			// MAKING A NEW CIRCLE BASED ON MOUSEDOWN TIME
 			(function(){
@@ -431,7 +499,8 @@
 			// INSTANTIATING THE ACTIVE BACKGROUND
 			var playground = new PlayGround();
 			setInterval(playground.loop, 15);
-		</script>
+		</script> 
+	-->	
 		<!-- End colored circles script for the top banner strip -->
 
 		

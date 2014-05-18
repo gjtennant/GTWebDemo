@@ -2,10 +2,13 @@
 ::moz-selection{ background-color: #F0E96C; color: black; }
 ::webkit-selection{ background-color: #F0E96C; color: black; }
 
-#intro{
-	padding:5px;
-	background-color: #E8E8E8;
-	border-radius: 5px
+#topname{
+	/*display: inline-block;*/
+	/*box-shadow: 3px 3px 20px #303030;*/
+}
+
+#topnav{
+	float:right;
 }
 
 .row{
@@ -13,16 +16,38 @@
 	padding: 20px 0px 30px 0px;
 }
 
-#topname{
-	/*display: inline-block;*/
-	/*box-shadow: 3px 3px 20px #303030;*/
+#intro{
+	padding:5px;
+	background-color: #E8E8E8;
+	border-radius: 5px
 }
 
+	.triggerwords{
+		color:blue;
+		text-decoration: underline;
+	}
 
-#topnav{
-	float:right;
+.highlight{
+	border-radius: 5px;
+	background-color: lightblue;
+	/* how bout giving this a text glow instead of a color background */
 }
 
+#swimbackground{
+	height: 205px;
+	width: 456px;
+	background-color: black;
+	border-radius: -10px; /* huh? minus ten? */
+}
+
+.swimholder{
+	display:inline-block;
+	margin:10px 0px 0px 15px;
+}
+
+.swims{
+	border-radius: 10px;
+}
 
 body {
 	background-color: #fff;
