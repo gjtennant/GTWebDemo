@@ -26,7 +26,7 @@ class Ajax_posts extends CI_Controller {
 		$data = array('id' => $this->input->get('id'));
 		
 		$this->ajax_post->delete_note($data);
-		redirect(base_url('projects/index')); // turn this line off once the Ajax function is working(??)(but it's working now, and the line is still turned on - turning it off breaks it)
+		redirect(base_url('projects/index')); 
 	}
 	
 }

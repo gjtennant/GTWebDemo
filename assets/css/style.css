@@ -11,6 +11,10 @@
 	float:right;
 }
 
+#topnav a{
+	text-decoration: none;
+}
+
 .row{
 	border-bottom: 2px solid #C2C2C2;
 	padding: 20px 0px 30px 0px;

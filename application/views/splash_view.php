@@ -204,13 +204,18 @@
 					</li>
 			</div>
 			<button type='button' class='btn btn-sm btn-default'>
+				<a href="https://github.com/gjtennant">
+					GitHub
+				</a>
+			</button>
+			<button type='button' class='btn btn-sm btn-default'>
 				<a href="http://www.linkedin.com/pub/greg-tennant/6/b44/124">
 					Linked In
 				</a>
 			</button>
 			<button type='button' class='btn btn-sm btn-default'>
 				<a href="">
-					Contact Me
+					Contact
 				</a>
 			</button>
 		</div>
@@ -226,7 +231,7 @@
 			
 				<h2>Hi, nice to see you</h2>
 				<p id='intro'>The things on this page are made with jQuery, Javascript and PHP. The <span class='triggerwords' id='trigger_color'>color items</span> I received as partly-built class exercises with errors to fix and incompletes to finish. The <span class='triggerwords' id='trigger_others'>others</span> I wrote from scratch.</p>
-				<p class='other'><em>See the code for this entire page at <a href="https://github.com/gjtennant/GTWebDemo"> https://github.com/gjtennant/GTWebDemo</a></em></p>
+				<p class='other'><em>See the code for this entire page on GitHub at <a href="https://github.com/gjtennant/GTWebDemo"> https://github.com/gjtennant/GTWebDemo</a></em></p>
 
 				<!-- Begin Javascript circles -->
 				<div class='col-md-4'>
@@ -267,9 +272,6 @@
 				</div>
 				<!-- End Random Password Generator -->
 
-
-
-
 				<!-- Begin Color Clicker -->
 				<div class='col-md-4'>
 					<div class='color'>
@@ -308,7 +310,10 @@
 				<div class='swimholder'>
 					<img class='swims' src='/assets/img/wom4front.png' alt='/assets/img/wom4back.png'>
 				</div>
-				<p><em>See the code</em></p>
+
+				<a href="">
+					<p><em>See the code</em></p>
+				</a>
 			</div>
 		</div>
 
@@ -323,7 +328,7 @@
 			<div id='Mont' class='col-md-9'>
 				<p>Before I learned to code, I collaborated on a team of eight to create this public-facing web site for Santa Cruz Montessori School. </p>
 				<p>We built an entirely new site from the ground up, organizing all the information you'd need to fall in love with the school and make a solid determination to send your kids there. It was quite an undertaking.</p>
-				<p>(I also made the video on the bottom of the front page, "Experience Family Work Day 2013.")</p>
+				<p>(I also made the video on the bottom of the front page, <a href="">"Experience Family Work Day 2013."</a>)</p>
 			</div>
 		</div>
 
