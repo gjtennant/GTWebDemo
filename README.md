@@ -1,2 +1,2 @@
-CodeIgniter project for my PHP and Javascript demo site.
+CodeIgniter project for my PHP and Javascript/jQuery demo site.
 
