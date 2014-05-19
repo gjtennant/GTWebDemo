@@ -22,10 +22,10 @@
 	<link rel="stylesheet" type="text/css" href="/assets/css/color_clicker.css">
 
 	<!-- jQuery library -->
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script type="text/javascript" src='/assets/jquery-ui-1.10.4/jquery-1.10.2.js'></script>
 
 	<!-- Angular.js library -->
-	<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.5/angular.min.js'></script>
+	<script src='/assets/angular.js'></script>
 
 	<!-- Bootstrap script library -->
  	<script type="text/javascript" src='/assets/bootstrap-3.1.1-dist/js/bootstrap.min.js'></script>
@@ -133,11 +133,6 @@
 					'json')
 				return false;
 			})
-
-
-
-
-
 
 			// Add a remark
 			$('#msgbox').submit(function()
@@ -328,7 +323,7 @@
 			<div id='Mont' class='col-md-9'>
 				<p>Before I learned to code, I collaborated on a team of eight to create this public-facing web site for Santa Cruz Montessori School. </p>
 				<p>We built an entirely new site from the ground up, organizing all the information you'd need to fall in love with the school and make a solid determination to send your kids there. It was quite an undertaking.</p>
-				<p>(I also made the video on the bottom of the front page, <a href="">"Experience Family Work Day 2013."</a>)</p>
+				<p>(I also made the video on the bottom of the front page, <a href="https://www.youtube.com/watch?v=ND1FHC1TyUg">"Experience Family Work Day 2013."</a>)</p>
 			</div>
 		</div>
 
@@ -376,7 +371,6 @@
 		</div>
 
 		<!-- Begin colored circles script for the top banner strip -->
-	<!-- commenting this out for now to save battery power
 		<script>
 			// MAKING A NEW CIRCLE BASED ON MOUSEDOWN TIME
 			(function(){
@@ -505,7 +499,6 @@
 			var playground = new PlayGround();
 			setInterval(playground.loop, 15);
 		</script> 
-	-->	
 		<!-- End colored circles script for the top banner strip -->
 
 		

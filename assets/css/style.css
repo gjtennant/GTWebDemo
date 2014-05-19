@@ -33,14 +33,14 @@
 
 .highlight{
 	border-radius: 5px;
-	background-color: lightblue;
+	background-color: aquamarine;
 	/* how bout giving this a text glow instead of a color background */
 }
 
 #swimbackground{
 	height: 205px;
 	width: 456px;
-	background-color: black;
+	background-color: black;	
 	border-radius: -10px; /* huh? minus ten? */
 }
 
