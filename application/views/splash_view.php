@@ -24,6 +24,8 @@
 	<!-- jQuery library -->
 	<script type="text/javascript" src='/assets/jquery-ui-1.10.4/jquery-1.10.2.js'></script>
 
+	<script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+
 	<!-- Angular.js library -->
 	<script src='/assets/angular.js'></script>
 
@@ -192,11 +194,10 @@
 			<div class='btn-group'>
 				<button type='button' class='btn btn-sm btn-default dropdown-toggle' data-toggle='dropdown'>Projects<span class='caret'></span>
 				</button>
-						<ul class='dropdown-menu'>
-							<li><a href="/projects/superwide">Javascript Circles</a></li>
-							<li><a href="http://www.scms.org/">Santa Cruz Montessori</a></li>
-						</ul>
-					</li>
+					<ul class='dropdown-menu'>
+						<li><a href="/projects/superwide">Javascript Circles</a></li>
+						<li><a href="http://www.scms.org/">Santa Cruz Montessori</a></li>
+					</ul>
 			</div>
 			<button type='button' class='btn btn-sm btn-default'>
 				<a href="https://github.com/gjtennant">
@@ -208,11 +209,7 @@
 					Linked In
 				</a>
 			</button>
-			<button type='button' class='btn btn-sm btn-default'>
-				<a href="">
-					Contact
-				</a>
-			</button>
+			
 		</div>
 
 		<h1 id='topname'>Greg Tennant <small>Santa Cruz, CA</small></h1>
@@ -263,6 +260,16 @@
 							<img src="/assets/img/code_generator.jpg" height='109px'>
 							<p><em>See the code</em></p>
 						</a>
+
+						  <div data-role="main" class="ui-content">
+
+							<a href="#myPopup" data-rel="popup" class="ui-btn ui-btn-inline ui-corner-all">
+							Show Popup
+							</a>
+							<div data-role="popup" id="myPopup">
+							  <p>This is a simple popup.</p>
+							</div>
+						</div>
 					</div>
 				</div>
 				<!-- End Random Password Generator -->
