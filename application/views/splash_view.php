@@ -298,26 +298,32 @@
 		<div class='row'>
 			<div class='other'>
 				<div class='swimholder'>
+					<img class='swims' src='/assets/img/dress_red_front.png' alt='/assets/img/dress_red_back.png'>
+				</div>
+				<div class='swimholder'>
 					<img class='swims' src='/assets/img/dress_white_front.png' alt='/assets/img/dress_white_back.png'>
 				</div>
 				<div class='swimholder'>
 					<img class='swims' src='/assets/img/dress_black_front.png' alt='/assets/img/dress_black_back.png'>
 				</div>
-				<div class="swimholder">
-					<img class='swims' src="/assets/img/wom2front.png" alt="/assets/img/wom2back.png">
-				</div>
-				<div class='swimholder'>
-					<img class='swims' src="/assets/img/wom3front.png" alt='/assets/img/wom3back.png'>
-				</div>
+
 				<div class='swimholder'>
 					<img class='swims' src='/assets/img/wom4front.png' alt='/assets/img/wom4back.png'>
 				</div>
 				<div class='swimholder'>
-					<img class='swims' src="/assets/img/wom5front.png" alt='/assets/img/wom5back.png'>
+					<img class='swims' src="/assets/img/wom3front.png" alt='/assets/img/wom3back.png'>
 				</div>
+				<div class="swimholder">
+					<img class='swims' src="/assets/img/wom2front.png" alt="/assets/img/wom2back.png">
+				</div>
+
 				<div class='swimholder'>
 					<img class='swims' src='/assets/img/wom7front.png' alt='/assets/img/wom7back.png'>
 				</div>
+				<div class='swimholder'>
+				</div>
+					<img class='swims' src="/assets/img/wom5front.png" alt='/assets/img/wom5back.png'>
+
 				<div class="swimholder">
 					<img class='swims' src="/assets/img/bikini_black_front.png" alt="/assets/img/bikini_black_back.png">
 				</div>
