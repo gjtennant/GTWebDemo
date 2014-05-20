@@ -21,7 +21,7 @@
 	<!-- Color Clicker style sheet link -->
 	<link rel="stylesheet" type="text/css" href="/assets/css/color_clicker.css">
 
-	<!-- Manific Popup core CSS file -->
+	<!-- Magnific Popup core CSS file -->
 	<link rel="stylesheet" href="/assets/magnific-popup/dist/magnific-popup.css">
 
 	<!-- jQuery library -->
@@ -244,6 +244,7 @@
 							<img src="/assets/img/code_superwide.jpg" height='109px;'>
 							<p><em>See the code</em></p>
 						</a>
+
 					</div>
 				</div>
 				<!-- End Javascript circles -->
@@ -263,7 +264,7 @@
 							<input type='submit' class='btn-sm btn-success' value='Reset Counter' style='margin-top:4px;margin-bottom:4px;'>
 						</form>
 
-						<a href="">
+						<a class='image-link' href="/assets/img/code_generator.jpg">
 							<img src="/assets/img/code_generator.jpg" height='109px'>
 							<p><em>See the code</em></p>
 						</a>
@@ -331,8 +332,7 @@
 					<img class='swims' src='/assets/img/bikini_brown_front.png' alt='/assets/img/bikini_brown_back.png'>
 				</div>
 
-
-				<a href="">
+				<a class='image-link' href="/assets/img/code_swimsuits.jpg">
 					<p><em>See the code</em></p>
 				</a>
 			</div>
@@ -349,7 +349,7 @@
 			<div id='Mont' class='col-md-9'>
 				<p>Before I learned to code, I collaborated on a team of eight to create this public-facing web site for Santa Cruz Montessori School. </p>
 				<p>We built an entirely new site from the ground up, organizing all the information you'd need to fall in love with the school and make a solid determination to send your kids there. It was quite an undertaking.</p>
-				<p>(I also made the video on the bottom of the front page, <a href="https://www.youtube.com/watch?v=ND1FHC1TyUg">"Experience Family Work Day 2013."</a>)</p>
+				<p>(I also made the video on the bottom of the front page, <a class='image-link' href="http://www.youtube.com/watch?v=ND1FHC1TyUg">"Experience Family Work Day 2013."</a>)</p>
 			</div>
 		</div>
 
