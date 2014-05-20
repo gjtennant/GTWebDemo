@@ -21,10 +21,14 @@
 	<!-- Color Clicker style sheet link -->
 	<link rel="stylesheet" type="text/css" href="/assets/css/color_clicker.css">
 
+	<!-- Manific Popup core CSS file -->
+	<link rel="stylesheet" href="/assets/magnific-popup/dist/magnific-popup.css">
+
 	<!-- jQuery library -->
 	<script type="text/javascript" src='/assets/jquery-ui-1.10.4/jquery-1.10.2.js'></script>
 
-	<script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+	<!-- Magnific Popup core JS file -->
+	<script src="/assets/magnific-popup/dist/jquery.magnific-popup.js"></script> 
 
 	<!-- Angular.js library -->
 	<script src='/assets/angular.js'></script>
@@ -62,6 +66,9 @@
  				$(this).attr('src', $(this).attr('alt'));
  				$(this).attr('alt', aux);
  			})
+
+ 			// Also the popup script
+ 			$('.image-link').magnificPopup({type:'image'});
  		})
  	</script>
  	<!-- End on hover script -->
@@ -260,16 +267,6 @@
 							<img src="/assets/img/code_generator.jpg" height='109px'>
 							<p><em>See the code</em></p>
 						</a>
-
-						  <div data-role="main" class="ui-content">
-
-							<a href="#myPopup" data-rel="popup" class="ui-btn ui-btn-inline ui-corner-all">
-							Show Popup
-							</a>
-							<div data-role="popup" id="myPopup">
-							  <p>This is a simple popup.</p>
-							</div>
-						</div>
 					</div>
 				</div>
 				<!-- End Random Password Generator -->
@@ -300,8 +297,11 @@
 		<!-- Next row, with on.hover swimsuits -->
 		<div class='row'>
 			<div class='other'>
-				<div class="swimholder">
-					<img class='swims' src="/assets/img/wom1front.png" alt="/assets/img/wom1back.png">
+				<div class='swimholder'>
+					<img class='swims' src='/assets/img/dress_white_front.png' alt='/assets/img/dress_white_back.png'>
+				</div>
+				<div class='swimholder'>
+					<img class='swims' src='/assets/img/dress_black_front.png' alt='/assets/img/dress_black_back.png'>
 				</div>
 				<div class="swimholder">
 					<img class='swims' src="/assets/img/wom2front.png" alt="/assets/img/wom2back.png">
@@ -312,6 +312,19 @@
 				<div class='swimholder'>
 					<img class='swims' src='/assets/img/wom4front.png' alt='/assets/img/wom4back.png'>
 				</div>
+				<div class='swimholder'>
+					<img class='swims' src="/assets/img/wom5front.png" alt='/assets/img/wom5back.png'>
+				</div>
+				<div class='swimholder'>
+					<img class='swims' src='/assets/img/wom7front.png' alt='/assets/img/wom7back.png'>
+				</div>
+				<div class="swimholder">
+					<img class='swims' src="/assets/img/bikini_black_front.png" alt="/assets/img/bikini_black_back.png">
+				</div>
+				<div class='swimholder'>
+					<img class='swims' src='/assets/img/bikini_brown_front.png' alt='/assets/img/bikini_brown_back.png'>
+				</div>
+
 
 				<a href="">
 					<p><em>See the code</em></p>

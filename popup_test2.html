@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+	<title>Magnific Test</title>
+
+	<!-- jQuery library -->
+	<script type="text/javascript" src='/assets/jquery-ui-1.10.4/jquery-1.10.2.js'></script>
+
+	<!-- Magnific Popup core JS file -->
+	<script src="/assets/magnific-popup/dist/jquery.magnific-popup.js"></script> 
+
+	<!-- Manific Popup core CSS file -->
+	<link rel="stylesheet" href="/assets/magnific-popup/dist/magnific-popup.css">
+
+	<script type='text/javascript'>
+
+		$(document).ready(function() 
+		{
+  			$('.image-link').magnificPopup({type:'image'});
+
+		});
+
+	</script>
+
+
+</head>
+<body>
+
+	<a class="test-popup-link" href="path-to-image.jpg">Open popup</a>
+
+	<script type='text/javascript'>
+		$('.test-popup-link').magnificPopup({ 
+	  		type: 'image'
+		// other options
+		});
+
+	</script>
+
+	<div class="parent-container">
+	  <a href="path-to-image-1.jpg">Open popup 1</a>
+	  <a href="path-to-image-2.jpg">Open popup 2</a>
+	  <a href="path-to-image-3.jpg">Open popup 3</a>
+	</div>
+
+	<script type='text/javascript'>
+		$('.parent-container').magnificPopup({
+		  delegate: 'a', // child items selector, by clicking on it popup will open
+		  type: 'image'
+		  // other options
+		});
+	</script>
+
+</body>
+</html>
