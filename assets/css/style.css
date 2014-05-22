@@ -21,7 +21,7 @@
 }
 
 #intro{
-	padding:5px;
+	padding:10px;
 	background-color: #E8E8E8;
 	border-radius: 5px
 }
@@ -51,6 +51,40 @@
 
 .swims{
 	border-radius: 10px;
+}
+
+#tablebounder{
+	height:260px;
+	overflow: scroll;
+	border:1px solid gray;
+	padding:3px;
+	border-radius: 3px;
+	margin: 5px 0px;
+}
+
+.x{
+	float:right;
+	vertical-align: top;
+	text-decoration: underline;
+}
+
+#large_box{
+	margin: 0px auto;
+	margin-top: 30px;
+	background-color: lightblue;
+	width: 310px;
+	height: 110px;	
+	box-shadow: 5px 5px 20px #303030;
+	border-radius: 8px;
+}
+
+#large_box div{ /*i.e. the smaller boxes*/
+	background-color: blue;
+	display: inline-block;
+	width: 70px;
+	height: 55px;
+	margin: 30px 15px;
+	box-shadow: 3px 3px 20px #303030;
 }
 
 body {

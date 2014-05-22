@@ -15,12 +15,6 @@
 	<!-- Codeigniter style sheet link -->
 	<link rel="stylesheet" type="text/css" href="/assets/css/style.css">
 
-	<!-- Ajax Posts style sheet link -->
-	<link rel="stylesheet" type="text/css" href="/assets/css/ajax_posts.css">
-
-	<!-- Color Clicker style sheet link -->
-	<link rel="stylesheet" type="text/css" href="/assets/css/color_clicker.css">
-
 	<!-- Magnific Popup core CSS file -->
 	<link rel="stylesheet" href="/assets/magnific-popup/dist/magnific-popup.css">
 
@@ -219,12 +213,12 @@
 			</div>
 			<button type='button' class='btn btn-sm btn-default'>
 				<a href="https://github.com/gjtennant">
-					GitHub
+					GitHub Account
 				</a>
 			</button>
 			<button type='button' class='btn btn-sm btn-default'>
 				<a href="http://www.linkedin.com/pub/greg-tennant/6/b44/124">
-					Linked In
+					Linked In Profile
 				</a>
 			</button>
 			
@@ -240,20 +234,24 @@
 				<svg id="svg" style='background-color:cyan;' height='15px' xmlns="http://www.w3.org/2000/svg"></svg>
 			
 				<h2>Hi, nice to see you</h2>
-				<p id='intro'>The things on this page are made with jQuery, Javascript and PHP. The <span class='triggerwords' id='trigger_color'>color items</span> I received as partly-built class exercises with errors to fix and incompletes to finish. The <span class='triggerwords' id='trigger_others'>others</span> I wrote from scratch.</p>
-				<p class='other'><em>See the code for this entire page on GitHub at <a href="https://github.com/gjtennant/GTWebDemo"> https://github.com/gjtennant/GTWebDemo</a></em></p>
+				<div id='intro'>
+					<p>I'm a full-stack web developer with a Red Belt certification from the <a href="http://codingdojo.com/">Coding Dojo</a> in Mountain View, California. I studied HTML5, CSS3, MySQL, Version Control with Git and GitHub, PHP, CodeIgniter, jQuery, AJAX, Javascript, Node.js, Express.io, and Ruby on Rails.</p>
+					<p>I also have a long history of film and video work. I'm a graduate of the USC School of Cinematic Arts, and I've worked on countless independent features, documentaries, educational films and research videos.</p>
+					<p>The features on this page are made with jQuery, Javascript and PHP. The <span class='triggerwords' id='trigger_color'>color items</span> I received as partly-built class exercises with errors to fix and incompletes to finish. The <span class='triggerwords' id='trigger_others'>others</span> I wrote from scratch.</p>
+				</div>
+					<p class='other'><em>• See the code for this entire page on GitHub at <a href="https://github.com/gjtennant/GTWebDemo"> https://github.com/gjtennant/GTWebDemo</a></em></p>
 
 				<!-- Begin Javascript circles -->
 				<div class='col-md-4'>
 					<div class='color'>
-						<h4>Fun with color:</h4>
+						<h4>Fun with color</h4>
 						<a href="/projects/superwide">
 						<img src="/assets/img/superwide12.jpg" height='100px'>
-						<p><em>Javascript circles</em></p></a>
+						<p><em>Javascript circles - click here!</em></p></a>
 						
 						<a href="https://github.com/gjtennant/javascript_circles/blob/master/superwide.html"> 
 							<img src="/assets/img/code_superwide.jpg" height='109px;'>
-							<p><em>See the code</em></p>
+							<p><em>See the code on GitHub</em></p>
 						</a>
 
 					</div>
@@ -277,7 +275,7 @@
 
 						<a class='image-link' href="/assets/img/code_generator.jpg">
 							<img src="/assets/img/code_generator.jpg" height='109px'>
-							<p><em>See the code</em></p>
+							<p><em>See the code in a pop-up window</em></p>
 						</a>
 					</div>
 				</div>
@@ -308,6 +306,7 @@
 
 		<!-- Next row, with on.hover swimsuits -->
 		<div class='row'>
+			<h4>Catalog View <small>hover over the pictures</small></h4>
 			<div class='other'>
 				<div class='swimholder'>
 					<img class='swims' src='/assets/img/dress_red_front.png' alt='/assets/img/dress_red_back.png'>
