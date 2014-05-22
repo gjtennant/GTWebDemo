@@ -4,7 +4,7 @@
 	<meta charset='utf-8'>
 	<meta name='index' content='gregtennant contents directory'>
 
-	<title>GT Web Demo</title>
+	<title>Greg Tennant Web Dev</title>
 
 	<!-- Viewport meta tag to ensure proper rendering and touch zooming -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -24,9 +24,18 @@
 	<!-- Magnific Popup core CSS file -->
 	<link rel="stylesheet" href="/assets/magnific-popup/dist/magnific-popup.css">
 
+	<!-- jQuery UI theme style sheet -->
+	<link type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/redmond/jquery-ui.css" rel="stylesheet" />
+
 	<!-- jQuery library -->
 	<script type="text/javascript" src='/assets/jquery-ui-1.10.4/jquery-1.10.2.js'></script>
 
+	<!-- jQuery UI library -->
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
+
+	<!-- jQuery YouTube popup plugin 
+	<script type="text/javascript" src="jquery.youtubepopup.min.js"></script>
+-->
 	<!-- Magnific Popup core JS file -->
 	<script src="/assets/magnific-popup/dist/jquery.magnific-popup.js"></script> 
 
@@ -36,7 +45,7 @@
 	<!-- Bootstrap script library -->
  	<script type="text/javascript" src='/assets/bootstrap-3.1.1-dist/js/bootstrap.min.js'></script>
 
- 	<!-- Begin on hover script -->
+ 	<!-- Begin on hover script, image popups and video popup -->
  	<script type="text/javascript">
  		$(document).ready(function()
  		{
@@ -48,7 +57,6 @@
  			{
  				$('.color').removeClass('highlight');
  			})
-
 
  			$('#trigger_others').hover(function()
  			{
@@ -67,8 +75,11 @@
  				$(this).attr('alt', aux);
  			})
 
- 			// Also the popup script
+ 			// Image popup script
  			$('.image-link').magnificPopup({type:'image'});
+
+ 			// YouTube popup script	
+ 			// $('a.youtube').YouTubePopup({modal:true});
  		})
  	</script>
  	<!-- End on hover script -->
@@ -304,10 +315,10 @@
 				<div class='swimholder'>
 					<img class='swims' src='/assets/img/dress_white_front.png' alt='/assets/img/dress_white_back.png'>
 				</div>
-				<div class='swimholder'>
+<!-- 				<div class='swimholder'>
 					<img class='swims' src='/assets/img/dress_black_front.png' alt='/assets/img/dress_black_back.png'>
 				</div>
-
+ -->
 				<div class='swimholder'>
 					<img class='swims' src='/assets/img/wom4front.png' alt='/assets/img/wom4back.png'>
 				</div>
@@ -317,21 +328,22 @@
 				<div class="swimholder">
 					<img class='swims' src="/assets/img/wom2front.png" alt="/assets/img/wom2back.png">
 				</div>
-
-				<div class='swimholder'>
+<!--
+ 				<div class='swimholder'>
 					<img class='swims' src='/assets/img/wom7front.png' alt='/assets/img/wom7back.png'>
 				</div>
 				<div class='swimholder'>
-				</div>
 					<img class='swims' src="/assets/img/wom5front.png" alt='/assets/img/wom5back.png'>
-
+				</div>
+ -->
 				<div class="swimholder">
 					<img class='swims' src="/assets/img/bikini_black_front.png" alt="/assets/img/bikini_black_back.png">
 				</div>
-				<div class='swimholder'>
+<!--
+ 				<div class='swimholder'>
 					<img class='swims' src='/assets/img/bikini_brown_front.png' alt='/assets/img/bikini_brown_back.png'>
 				</div>
-
+ -->
 				<a class='image-link' href="/assets/img/code_swimsuits.jpg">
 					<p><em>See the code</em></p>
 				</a>
@@ -348,8 +360,8 @@
 			</div>
 			<div id='Mont' class='col-md-9'>
 				<p>Before I learned to code, I collaborated on a team of eight to create this public-facing web site for Santa Cruz Montessori School. </p>
-				<p>We built an entirely new site from the ground up, organizing all the information you'd need to fall in love with the school and make a solid determination to send your kids there. It was quite an undertaking.</p>
-				<p>(I also made the video on the bottom of the front page, <a class='image-link' href="http://www.youtube.com/watch?v=ND1FHC1TyUg">"Experience Family Work Day 2013."</a>)</p>
+				<p>We built an entirely new site from the ground up, organizing all the information you'd need to fall in love with the school and make a solid determination to send your kids there.</p>
+				<p>(I also made the video on the bottom of the front page, <a class='youtube' href="http://www.youtube.com/watch?v=ND1FHC1TyUg">"Experience Family Work Day 2013."</a>)</p>
 			</div>
 		</div>
 
