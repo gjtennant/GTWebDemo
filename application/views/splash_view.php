@@ -4,7 +4,7 @@
 	<meta charset='utf-8'>
 	<meta name='index' content='gregtennant contents directory'>
 
-	<title>Greg Tennant Web Dev</title>
+	<title>Greg Tennant offline version</title>
 
 	<!-- Viewport meta tag to ensure proper rendering and touch zooming -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,7 +16,7 @@
 	<link rel="stylesheet" type="text/css" href="/assets/css/style.css">
 
 	<!-- Magnific Popup core CSS file -->
-	<link rel="stylesheet" href="/assets/magnific-popup/dist/magnific-popup.css">
+	<link rel="stylesheet" href="/assets/Magnific-Popup/dist/magnific-popup.css">
 
 	<!-- jQuery UI theme style sheet -->
 	<link type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/redmond/jquery-ui.css" rel="stylesheet" />
@@ -27,11 +27,8 @@
 	<!-- jQuery UI library -->
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
 
-	<!-- jQuery YouTube popup plugin 
-	<script type="text/javascript" src="jquery.youtubepopup.min.js"></script>
--->
 	<!-- Magnific Popup core JS file -->
-	<script src="/assets/magnific-popup/dist/jquery.magnific-popup.js"></script> 
+	<script src="/assets/Magnific-Popup/dist/jquery.magnific-popup.js"></script> 
 
 	<!-- Angular.js library -->
 	<script src='/assets/angular.js'></script>
@@ -61,7 +58,7 @@
  				$('.other').removeClass('highlight');
  			})
 
- 			$('.swims').hover(function()
+ 			$('.hairs').hover(function()
  			{
  				var aux = $(this).attr('src');
 
@@ -72,9 +69,7 @@
  			// Image popup script
  			$('.image-link').magnificPopup({type:'image'});
 
- 			// YouTube popup script	
- 			// $('a.youtube').YouTubePopup({modal:true});
- 		})
+  		})
  	</script>
  	<!-- End on hover script -->
 
@@ -231,16 +226,15 @@
 		<div id='circlebox' height='500px'>
 			<div class='row'>
 				
-				<svg id="svg" style='background-color:cyan;' height='15px' xmlns="http://www.w3.org/2000/svg"></svg>
+			<svg id="svg" style='background-color:cyan;' height='15px' xmlns="http://www.w3.org/2000/svg"></svg>
 			
 				<h2>Hi, nice to see you</h2>
 				<div id='intro'>
-					<p>I'm a full-stack web developer with a Red Belt certification from the <a href="http://codingdojo.com/">Coding Dojo</a> in Mountain View, California. I studied HTML5, CSS3, MySQL, Version Control with Git and GitHub, PHP, CodeIgniter, jQuery, AJAX, Javascript, Node.js, Express.io, and Ruby on Rails.</p>
-					<p>I also have a long history of film and video work. I'm a graduate of the USC School of Cinematic Arts, and I've worked on countless independent features, documentaries, educational films and research videos.</p>
-					<p>The features on this page are made with jQuery, Javascript and PHP. The <span class='triggerwords' id='trigger_color'>color items</span> I received as partly-built class exercises with errors to fix and incompletes to finish. The <span class='triggerwords' id='trigger_others'>others</span> I wrote from scratch.</p>
+					<p>I built this site in PHP/CodeIgniter with jQuery, AJAX and Javascript features. The <span class='triggerwords' id='trigger_color'>color items</span> I received as partly-built class exercises with errors to fix and incompletes to finish. The <span class='triggerwords' id='trigger_others'>others</span> I wrote from scratch.</p>
 				</div>
 					<p class='other'><em>• See the code for this entire page on GitHub at <a href="https://github.com/gjtennant/GTWebDemo"> https://github.com/gjtennant/GTWebDemo</a></em></p>
 
+				
 				<!-- Begin Javascript circles -->
 				<div class='col-md-4'>
 					<div class='color'>
@@ -261,7 +255,7 @@
 				<!-- Begin Random Password Generator -->
 				<div class='col-md-4'>
 					<div class='other'>
-						<h4>Random Password Generator</h4>
+						<h4>Random Password Generator <br><small>(feel free to use)</small></h4>
 						<p>Spin #<span id='spinnumber'>1</span>:</p>
 
 						<h4 id='newpw'><?php echo $pw ?></h4>
@@ -304,62 +298,85 @@
 			</div>
 		</div> <!-- end circle-generating div and first row -->
 
-		<!-- Next row, with on.hover swimsuits -->
+		<!-- Next row, with on.hover catalog view -->
 		<div class='row'>
-			<h4>Catalog View <small>hover over the pictures</small></h4>
+			<h4>Catalog View <small>hover on a picture to choose your hairstyle</small></h4>
 			<div class='other'>
+
+				<div class='hairholder'>
+					<img class='hairs' src='/assets/img/hair_julianne_hough_front.png' alt='/assets/img/hair_julianne_hough_back.png'>
+				</div>
+
+				<div class='hairholder'>
+					<img class='hairs' src='/assets/img/hair_diane_kruger_front.png' alt='/assets/img/hair_diane_kruger_back.png'>
+				</div>
+
+				<div class='hairholder'>
+					<img class='hairs' src='/assets/img/hair_dianna_agron_front.png' alt='/assets/img/hair_dianna_agron_side.png'>
+				</div>
+
+				<div class='hairholder'>
+					<img class='hairs' src='/assets/img/hair_miley_cyrus_front.png' alt='/assets/img/hair_miley_cyrus_side.png'>
+				</div>
+
+				<!-- Swimsuits deemed 'not classy' by the critical voices
+
 				<div class='swimholder'>
 					<img class='swims' src='/assets/img/dress_red_front.png' alt='/assets/img/dress_red_back.png'>
 				</div>
 				<div class='swimholder'>
 					<img class='swims' src='/assets/img/dress_white_front.png' alt='/assets/img/dress_white_back.png'>
 				</div>
-<!-- 				<div class='swimholder'>
-					<img class='swims' src='/assets/img/dress_black_front.png' alt='/assets/img/dress_black_back.png'>
+ 				<div class='swimholder'>
+					<img class='swims' src='/assets/img/dress_black3_front.png' alt='/assets/img/dress_black3_back.png'>
 				</div>
- -->
+
 				<div class='swimholder'>
 					<img class='swims' src='/assets/img/wom4front.png' alt='/assets/img/wom4back.png'>
 				</div>
+
 				<div class='swimholder'>
 					<img class='swims' src="/assets/img/wom3front.png" alt='/assets/img/wom3back.png'>
 				</div>
 				<div class="swimholder">
 					<img class='swims' src="/assets/img/wom2front.png" alt="/assets/img/wom2back.png">
 				</div>
-<!--
+
  				<div class='swimholder'>
 					<img class='swims' src='/assets/img/wom7front.png' alt='/assets/img/wom7back.png'>
 				</div>
 				<div class='swimholder'>
 					<img class='swims' src="/assets/img/wom5front.png" alt='/assets/img/wom5back.png'>
 				</div>
- -->
+
 				<div class="swimholder">
 					<img class='swims' src="/assets/img/bikini_black_front.png" alt="/assets/img/bikini_black_back.png">
 				</div>
-<!--
+
  				<div class='swimholder'>
 					<img class='swims' src='/assets/img/bikini_brown_front.png' alt='/assets/img/bikini_brown_back.png'>
 				</div>
  -->
-				<a class='image-link' href="/assets/img/code_swimsuits.jpg">
-					<p><em>See the code</em></p>
+				<a class='image-link' href="/assets/img/code_haircuts.jpg">
+					<p><em>See the code in a pop-up window</em></p>
 				</a>
-			</div>
+
+ 			</div>
 		</div>
 
 		<!-- Next row, with SCM page -->
 		<div class='row'>
 			<div class='col-md-3'>
+				<h4>Other Projects</h4>
 				<a href="http://www.scms.org/">
 					<img src="/assets/img/screenshot_SCMS_2.jpg" height='150px'>
 					<p><em>See the site</em></p>
 				</a>
 			</div>
 			<div id='Mont' class='col-md-9'>
+				<p>I'm a full-stack web developer with a Red Belt certification from the <a href="http://codingdojo.com/">Coding Dojo</a> in Mountain View, California, where I built projects using HTML5, CSS3, Twitter Bootstrap, MySQL, Version Control with Git and GitHub, PHP, CodeIgniter, jQuery, AJAX, Javascript, Node.js, Express.io, and Ruby on Rails.</p>
 				<p>Before I learned to code, I collaborated on a team of eight to create this public-facing web site for Santa Cruz Montessori School. </p>
-				<p>We built an entirely new site from the ground up, organizing all the information you'd need to fall in love with the school and make a solid determination to send your kids there.</p>
+				<p>We built an entirely new site from the ground up, organizing all the information you'd need to fall in love with the school and make a solid determination to send your kids there. It was a major undertaking.</p>
 				<p>(I also made the video on the bottom of the front page, <a class='youtube' href="http://www.youtube.com/watch?v=ND1FHC1TyUg">"Experience Family Work Day 2013."</a>)</p>
 			</div>
 		</div>

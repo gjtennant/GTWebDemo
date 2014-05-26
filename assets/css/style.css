@@ -17,7 +17,7 @@
 
 .row{
 	border-bottom: 2px solid #C2C2C2;
-	padding: 20px 0px 30px 0px;
+	padding: 0px 0px 30px 0px;
 }
 
 #intro{
@@ -37,11 +37,13 @@
 	/* how bout giving this a text glow instead of a color background */
 }
 
-#swimbackground{
-	height: 205px;
-	width: 456px;
-	background-color: black;	
-	border-radius: -10px; /* huh? minus ten? */
+.hairholder{
+	display:inline-block;
+	margin:10px 30px 0px 0px;
+}
+
+.hairs{
+	height:300px;
 }
 
 .swimholder{
@@ -112,7 +114,7 @@ h1 {
 
 #Mont{
 	/*margin-left: 20px;*/
-	padding-left: 40px;
+	padding: 30px 0px 0px 40px;
 }
 
 #container{
