@@ -300,7 +300,7 @@
 
 		<!-- Next row, with on.hover catalog view -->
 		<div class='row'>
-			<h4>Catalog View <small>hover on a picture to choose your hairstyle</small></h4>
+			<h4>Catalog View <small>Hover on a picture to choose your hairstyle</small></h4>
 			<div class='other'>
 
 				<div class='hairholder'>
@@ -320,16 +320,6 @@
 				</div>
 
 				<!-- Swimsuits deemed 'not classy' by the critical voices
-
-				<div class='swimholder'>
-					<img class='swims' src='/assets/img/dress_red_front.png' alt='/assets/img/dress_red_back.png'>
-				</div>
-				<div class='swimholder'>
-					<img class='swims' src='/assets/img/dress_white_front.png' alt='/assets/img/dress_white_back.png'>
-				</div>
- 				<div class='swimholder'>
-					<img class='swims' src='/assets/img/dress_black3_front.png' alt='/assets/img/dress_black3_back.png'>
-				</div>
 
 				<div class='swimholder'>
 					<img class='swims' src='/assets/img/wom4front.png' alt='/assets/img/wom4back.png'>
@@ -352,11 +342,9 @@
 				<div class="swimholder">
 					<img class='swims' src="/assets/img/bikini_black_front.png" alt="/assets/img/bikini_black_back.png">
 				</div>
-
- 				<div class='swimholder'>
-					<img class='swims' src='/assets/img/bikini_brown_front.png' alt='/assets/img/bikini_brown_back.png'>
-				</div>
- -->
+				
+				-->
+				
 				<a class='image-link' href="/assets/img/code_haircuts.jpg">
 					<p><em>See the code in a pop-up window</em></p>
 				</a>
@@ -383,10 +371,10 @@
 
 		<!-- Next row, with Ajax message list -->
 		<div class='row'>
-			<div class='other'>
-				<!-- Begin Ajax Remarks -->
-				<div class='col-md-6'>
-					<h4>Like to leave a remark?</h4>
+			<!-- Begin Ajax Remarks -->
+			<div class='col-md-6'>
+				<div class='other'>
+					<h4>Like to leave a remark? <small>You can delete it while you're still here, but once you reload the page, it'll be baked in!</small></h4>
 					<h4><small>{{140 - charcount.length}} characters</small></h4>
 
 					<form id='msgbox' action='/ajax_posts/create' method='post'>
@@ -408,16 +396,15 @@
 								}
 							?>
 								<tr>
-									<td>You built this whole thing yourself? Impressive.</td>
 									<!-- This used to be part of the echo above: -->
 									<!-- <td><span class='x'><a class='delx' href='/ajax_posts/delete?id={$key['id']}'>x</a></span></td> -->
 								</tr>
 							</tbody>
 						</table>
 					</div>
-			</div>
 				</div>
 				<!-- End Ajax Remarks -->
+			</div>
 		</div>
 
 		<!-- Begin colored circles script for the top banner strip -->
