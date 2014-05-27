@@ -21,8 +21,11 @@
 	<!-- jQuery UI theme style sheet -->
 	<link type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/redmond/jquery-ui.css" rel="stylesheet" />
 
-	<!-- jQuery library -->
-	<script type="text/javascript" src='/assets/jquery-ui-1.10.4/jquery-1.10.2.js'></script>
+	<!-- jQuery library 
+	<script type="text/javascript" src='/assets/jquery-ui-1.10.4/jquery-1.10.2.js'></script>  -->
+
+	<!-- jQuery library, internet -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
 	<!-- jQuery UI library -->
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
@@ -304,46 +307,12 @@
 			<div class='other'>
 
 				<div class='hairholder'>
-					<img class='hairs' src='/assets/img/hair_julianne_hough_front.png' alt='/assets/img/hair_julianne_hough_back.png'>
+					<img class='hairs' src='/assets/img/hair4left.jpg' alt='/assets/img/hair4right.jpg'>
 				</div>
 
 				<div class='hairholder'>
-					<img class='hairs' src='/assets/img/hair_diane_kruger_front.png' alt='/assets/img/hair_diane_kruger_back.png'>
+					<img class='hairs' src='/assets/img/hair5front.jpg' alt='/assets/img/hair5side.jpg'>
 				</div>
-
-				<div class='hairholder'>
-					<img class='hairs' src='/assets/img/hair_dianna_agron_front.png' alt='/assets/img/hair_dianna_agron_side.png'>
-				</div>
-
-				<div class='hairholder'>
-					<img class='hairs' src='/assets/img/hair_miley_cyrus_front.png' alt='/assets/img/hair_miley_cyrus_side.png'>
-				</div>
-
-				<!-- Swimsuits deemed 'not classy' by the critical voices
-
-				<div class='swimholder'>
-					<img class='swims' src='/assets/img/wom4front.png' alt='/assets/img/wom4back.png'>
-				</div>
-
-				<div class='swimholder'>
-					<img class='swims' src="/assets/img/wom3front.png" alt='/assets/img/wom3back.png'>
-				</div>
-				<div class="swimholder">
-					<img class='swims' src="/assets/img/wom2front.png" alt="/assets/img/wom2back.png">
-				</div>
-
- 				<div class='swimholder'>
-					<img class='swims' src='/assets/img/wom7front.png' alt='/assets/img/wom7back.png'>
-				</div>
-				<div class='swimholder'>
-					<img class='swims' src="/assets/img/wom5front.png" alt='/assets/img/wom5back.png'>
-				</div>
-
-				<div class="swimholder">
-					<img class='swims' src="/assets/img/bikini_black_front.png" alt="/assets/img/bikini_black_back.png">
-				</div>
-				
-				-->
 				
 				<a class='image-link' href="/assets/img/code_haircuts.jpg">
 					<p><em>See the code in a pop-up window</em></p>
