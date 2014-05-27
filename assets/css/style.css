@@ -37,22 +37,13 @@
 	/* how bout giving this a text glow instead of a color background */
 }
 
-.hairholder{
+.holder{
 	display:inline-block;
 	margin:10px 30px 0px 0px;
 }
 
-.hairs{
+.hovers{
 	height:300px;
-}
-
-.swimholder{
-	display:inline-block;
-	margin:10px 0px 0px 15px;
-}
-
-.swims{
-	border-radius: 10px;
 }
 
 #tablebounder{

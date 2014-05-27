@@ -4,7 +4,7 @@
 	<meta charset='utf-8'>
 	<meta name='index' content='gregtennant contents directory'>
 
-	<title>Greg Tennant offline version</title>
+	<title>Greg Tennant Web Developer</title>
 
 	<!-- Viewport meta tag to ensure proper rendering and touch zooming -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -21,7 +21,7 @@
 	<!-- jQuery UI theme style sheet -->
 	<link type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/redmond/jquery-ui.css" rel="stylesheet" />
 
-	<!-- jQuery library 
+	<!-- jQuery library, local
 	<script type="text/javascript" src='/assets/jquery-ui-1.10.4/jquery-1.10.2.js'></script>  -->
 
 	<!-- jQuery library, internet -->
@@ -61,7 +61,7 @@
  				$('.other').removeClass('highlight');
  			})
 
- 			$('.hairs').hover(function()
+ 			$('.hovers').hover(function()
  			{
  				var aux = $(this).attr('src');
 
@@ -303,18 +303,26 @@
 
 		<!-- Next row, with on.hover catalog view -->
 		<div class='row'>
-			<h4>Catalog View <small>Hover on a picture to choose your hairstyle</small></h4>
+			<h4>Catalog View <small>Hover on a picture to choose your style</small></h4>
 			<div class='other'>
 
-				<div class='hairholder'>
-					<img class='hairs' src='/assets/img/hair4left.jpg' alt='/assets/img/hair4right.jpg'>
-				</div>
-
-				<div class='hairholder'>
-					<img class='hairs' src='/assets/img/hair5front.jpg' alt='/assets/img/hair5side.jpg'>
+				<div class='holder'>
+					<img class='hovers' src='/assets/img/wetsuits/Slinx-CORAL-1104-front.png' alt='/assets/img/wetsuits/Slinx-CORAL-1104-back.png'>
 				</div>
 				
-				<a class='image-link' href="/assets/img/code_haircuts.jpg">
+				<div class='holder'>
+					<img class='hovers' src='/assets/img/wetsuits/ARJW100035_XKSY_FRT1_555-739.JPG' alt='/assets/img/wetsuits/ARJW100035_XKSY_BCK1_555-739.JPG'>
+				</div>
+				
+				<div class='holder'>
+					<img class='hovers' src='/assets/img/wetsuits/WLU4CW_BLUE-HEATHER_2.jpg' alt='/assets/img/wetsuits/WLU4CW_PINK-HEATHER_2.jpg'>
+				</div>
+				
+				<div class='holder'>
+					<img class='hovers' src='/assets/img/wetsuits/WLU4GW_BLACK_2.jpg' alt='/assets/img/wetsuits/WLU4GW_WHITE_2.jpg'>
+				</div>
+				
+				<a class='image-link' href="/assets/img/code_wetsuits.jpg">
 					<p><em>See the code in a pop-up window</em></p>
 				</a>
 
@@ -341,13 +349,13 @@
 		<!-- Next row, with Ajax message list -->
 		<div class='row'>
 			<!-- Begin Ajax Remarks -->
-			<div class='col-md-6'>
+			<div class='col-md-12'>
 				<div class='other'>
 					<h4>Like to leave a remark? <small>You can delete it while you're still here, but once you reload the page, it'll be baked in!</small></h4>
 					<h4><small>{{140 - charcount.length}} characters</small></h4>
 
 					<form id='msgbox' action='/ajax_posts/create' method='post'>
-						<textarea id='inbox' name='description' rows='2' cols='98' ng-model='charcount'></textarea><br>
+						<textarea id='inbox' name='description' rows='2' cols='70' ng-model='charcount'></textarea><br>
 						<input class='btn btn-success btn-xs' type='submit' name='remark' value='Post'>
 					</form>
 					<div id='tablebounder'>
