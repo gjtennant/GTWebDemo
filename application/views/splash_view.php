@@ -153,7 +153,7 @@
 					function(data)
 					{
 						console.log(data);
-						$('#ajaxremarks').prepend("<tr><td>" + data[0]['description'] + "</td><td><span class='x'><a class='delx' href='/ajax_posts/delete/?id=" + data[0]['id'] + "'>x</a></span></td></tr>");
+						$('#ajaxremarks').prepend("<tr><td>" + data[0]['description'] + "</td><td><span class='x'><a class='delx' href='/ajax_posts/delete/?id=" + data[0]['id'] + "'>Remove</a></span></td></tr>");
 						$('#inbox').val("");
 					}, 
 					'json')
@@ -395,12 +395,7 @@
 					</form>
 					<div id='tablebounder'>
 						<table class='table table-striped table-hover table-condensed'>
-							<thead>
-								<tr>
-									<th>Remark</th>
-									<th>Delete</th>
-								</tr>
-							</thead>
+							
 							<tbody id='ajaxremarks'>
 							<?php
 								foreach ($posts as $key)
@@ -408,13 +403,14 @@
 									echo "
 										<tr>
 											<td>{$key['description']}</td>
-											<td><span class='x'><a class='delx' href='/ajax_posts/delete?id={$key['id']}'>x</a></span></td>
+											<td></td>
 										</tr>";
 								}
 							?>
 								<tr>
 									<td>You built this whole thing yourself? Impressive.</td>
-									<td><span class='x'>x</span></td>
+									<!-- This used to be part of the echo above: -->
+									<!-- <td><span class='x'><a class='delx' href='/ajax_posts/delete?id={$key['id']}'>x</a></span></td> -->
 								</tr>
 							</tbody>
 						</table>
@@ -440,7 +436,7 @@
 				}
 				document.onmouseup = function(e)
 				{
-					console.log(e);
+					// console.log(e);
 					time_pressed = getTime() - mousedown_time;
 					// console.log('time pressed: ', time_pressed);
 					playground.createNewCircle(document.getElementById('circlebox').clientWidth/2, document.getElementById('circlebox').clientHeight/2, time_pressed/3);

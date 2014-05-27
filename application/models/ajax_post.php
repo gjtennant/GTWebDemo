@@ -12,6 +12,7 @@ class Ajax_post extends CI_Model {
 	public function add_note($data)
 	{
 		date_default_timezone_set("America/Los_Angeles");
+		
 		$query = "INSERT INTO posts (description, created_at, updated_at)
 				  VALUES ('{$data['description']}', NOW(), NOW())";
 		$this->db->query($query);

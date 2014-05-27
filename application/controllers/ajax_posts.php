@@ -9,8 +9,10 @@ class Ajax_posts extends CI_Controller {
 
 		$description = mysql_real_escape_string($this->input->post('description'));
 
+		 $ip_addr = $this->input->ip_address();
+
 		// send data
-		$data = array('description' => $description);
+		$data = array('description' => $description, 'ip_addr' => $ip_addr);
 
 		$this->ajax_post->add_note($data);
 		
