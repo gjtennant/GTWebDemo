@@ -351,14 +351,15 @@
 			<div class='col-md-4'>
 				<h4></h4>
 				<iframe width="300" height="225" src="//www.youtube.com/embed/cS1MOPNXNaQ?rel=0" frameborder="0" allowfullscreen></iframe>
+				<p><em>Press play above to see a demo</em></p>
 			</div>
 			<div class='proj col-md-8'>
 				<p>Here's the Admin Page for a web app that's now in development. The clients are talking about a different approach, so I wanted to have a record of what it could do right now. The tables are sortable by column heading, and entries are clickable for editing.</p>
-				<p>It's built in Ruby on Rails.</p> 
+				<p>The style request was to make it look as simple and clear as a New York Times article. That's why there's no color, no pictures, and almost nothing moving.</p> 
+				<p>It's built in Ruby on Rails. </p>
 				<p>Code is on GitHub at <a href="https://github.com/gjtennant/AL_Admin_Panel.git">https://github.com/gjtennant/AL_Admin_Panel.git</a></p>
 			</div>
 		</div>
-
 
 		<!-- Next row, with Ajax message list -->
 		<div class='row'>
