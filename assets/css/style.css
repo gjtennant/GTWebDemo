@@ -20,6 +20,10 @@
 	padding: 0px 0px 30px 0px;
 }
 
+.row2{
+	
+}
+
 #intro{
 	padding:10px;
 	background-color: #E8E8E8;
@@ -103,7 +107,7 @@ h1 {
 	padding: 14px 15px 10px 15px;
 }
 
-#Mont{
+.proj{
 	/*margin-left: 20px;*/
 	padding: 30px 0px 0px 40px;
 }

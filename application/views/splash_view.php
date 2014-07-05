@@ -4,7 +4,7 @@
 	<meta charset='utf-8'>
 	<meta name='index' content='gregtennant contents directory'>
 
-	<title>Greg Tennant Web Developer</title>
+	<title>Greg Tennant offline version</title>
 
 	<!-- Viewport meta tag to ensure proper rendering and touch zooming -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -315,7 +315,7 @@
 				</div>
 				
 				<div class='holder'>
-					<img class='hovers' src='/assets/img/wetsuits/WLU4CW_BLUE-HEATHER_2.jpg' alt='/assets/img/wetsuits/WLU4CW_PINK-HEATHER_2.jpg'>
+					<img class='hovers' src='/assets/img/wetsuits/WLU4CW_BLUE-HEATHER_2.jpg' alt='/assets/img/wetsuits/WLU4CW_GREEN_HEATHER.jpg'>
 				</div>
 				
 				<div class='holder'>
@@ -335,23 +335,37 @@
 				<h4>Other Projects</h4>
 				<a href="http://www.scms.org/">
 					<img src="/assets/img/screenshot_SCMS_2.jpg" height='150px'>
-					<p><em>See the site</em></p>
+					<p><em>Go to the site</em></p>
 				</a>
 			</div>
-			<div id='Mont' class='col-md-9'>
-				<p>I'm a full-stack web developer with a Red Belt certification from the <a href="http://codingdojo.com/">Coding Dojo</a> in Mountain View, California, where I built projects using HTML5, CSS3, Twitter Bootstrap, MySQL, Version Control with Git and GitHub, PHP, CodeIgniter, jQuery, AJAX, Javascript, Node.js, Express.io, and Ruby on Rails.</p>
-				<p>Before I learned to code, I collaborated on a team of eight to create this public-facing web site for Santa Cruz Montessori School. </p>
+			<div class='proj col-md-9'>
+				<p>I'm a full-stack web developer with a Red Belt certification from the <a href="http://codingdojo.com/">Coding Dojo</a> in Mountain View, California, where I built projects using HTML5, CSS3, Twitter Bootstrap, MySQL, MySQL Workbench, Version Control with Git and GitHub, PHP, OOP, CodeIgniter, jQuery, AJAX, Javascript, Node.js, Express, Socket.io, and Ruby on Rails.</p>
+				<p>Before I learned to code, I collaborated on a team of eight to create <a href="http://www.scms.org/">this</a> public-facing web site for Santa Cruz Montessori School. </p>
 				<p>We built an entirely new site from the ground up, organizing all the information you'd need to fall in love with the school and make a solid determination to send your kids there. It was a major undertaking.</p>
 				<p>(I also made the video on the bottom of the front page, <a class='youtube' href="http://www.youtube.com/watch?v=ND1FHC1TyUg">"Experience Family Work Day 2013."</a>)</p>
 			</div>
 		</div>
+
+		<div class='row'>
+			<!-- Next row, with Admin view page -->
+			<div class='col-md-4'>
+				<h4></h4>
+				<iframe width="300" height="225" src="//www.youtube.com/embed/cS1MOPNXNaQ?rel=0" frameborder="0" allowfullscreen></iframe>
+			</div>
+			<div class='proj col-md-8'>
+				<p>Here's the Admin Page for a web app that's now in development. The clients are talking about a different approach, so I wanted to have a record of what it could do right now. The tables are sortable by column heading, and entries are clickable for editing.</p>
+				<p>It's built in Ruby on Rails.</p> 
+				<p>Code is on GitHub at <a href="https://github.com/gjtennant/AL_Admin_Panel.git">https://github.com/gjtennant/AL_Admin_Panel.git</a></p>
+			</div>
+		</div>
+
 
 		<!-- Next row, with Ajax message list -->
 		<div class='row'>
 			<!-- Begin Ajax Remarks -->
 			<div class='col-md-12'>
 				<div class='other'>
-					<h4>Like to leave a remark? <small>You can delete it while you're still here, but once you reload the page, it'll be baked in!</small></h4>
+					<h4>Like to leave a remark?</h4>
 					<h4><small>{{140 - charcount.length}} characters</small></h4>
 
 					<form id='msgbox' action='/ajax_posts/create' method='post'>
@@ -515,7 +529,6 @@
 		</script> 
 		<!-- End colored circles script for the top banner strip -->
 
-		
 	</div>
 </body>
 </html>
