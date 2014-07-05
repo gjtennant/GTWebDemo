@@ -2,11 +2,6 @@
 ::moz-selection{ background-color: #F0E96C; color: black; }
 ::webkit-selection{ background-color: #F0E96C; color: black; }
 
-#topname{
-	/*display: inline-block;*/
-	/*box-shadow: 3px 3px 20px #303030;*/
-}
-
 #topnav{
 	float:right;
 }
@@ -18,10 +13,6 @@
 .row{
 	border-bottom: 2px solid #C2C2C2;
 	padding: 0px 0px 30px 0px;
-}
-
-.row2{
-	
 }
 
 #intro{
@@ -38,7 +29,6 @@
 .highlight{
 	border-radius: 5px;
 	background-color: aquamarine;
-	/* how bout giving this a text glow instead of a color background */
 }
 
 .holder{
@@ -108,8 +98,7 @@ h1 {
 }
 
 .proj{
-	/*margin-left: 20px;*/
-	padding: 30px 0px 0px 40px;
+	padding: 30px 0px 0px 0px;
 }
 
 #container{

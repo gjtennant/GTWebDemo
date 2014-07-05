@@ -233,6 +233,7 @@
 			
 				<h2>Hi, nice to see you</h2>
 				<div id='intro'>
+					<p>I'm a full-stack web developer with a Black Belt certification from the <a href="http://codingdojo.com/">Coding Dojo</a> in Mountain View, California, where I built projects using HTML5, CSS3, Twitter Bootstrap, MySQL, MySQL Workbench, Version Control with Git and GitHub, PHP, OOP, CodeIgniter, jQuery, AJAX, Javascript, Node.js, Express, Socket.io, and Ruby on Rails.</p>
 					<p>I built this site in PHP/CodeIgniter with jQuery, AJAX and Javascript features. The <span class='triggerwords' id='trigger_color'>color items</span> I received as partly-built class exercises with errors to fix and incompletes to finish. The <span class='triggerwords' id='trigger_others'>others</span> I wrote from scratch.</p>
 				</div>
 					<p class='other'><em>• See the code for this entire page on GitHub at <a href="https://github.com/gjtennant/GTWebDemo"> https://github.com/gjtennant/GTWebDemo</a></em></p>
@@ -331,15 +332,14 @@
 
 		<!-- Next row, with SCM page -->
 		<div class='row'>
-			<div class='col-md-3'>
-				<h4>Other Projects</h4>
+			<h4>Other Projects</h4>
+			<div class='proj col-md-4'>
 				<a href="http://www.scms.org/">
 					<img src="/assets/img/screenshot_SCMS_2.jpg" height='150px'>
 					<p><em>Go to the site</em></p>
 				</a>
 			</div>
-			<div class='proj col-md-9'>
-				<p>I'm a full-stack web developer with a Red Belt certification from the <a href="http://codingdojo.com/">Coding Dojo</a> in Mountain View, California, where I built projects using HTML5, CSS3, Twitter Bootstrap, MySQL, MySQL Workbench, Version Control with Git and GitHub, PHP, OOP, CodeIgniter, jQuery, AJAX, Javascript, Node.js, Express, Socket.io, and Ruby on Rails.</p>
+			<div class='proj col-md-8'>
 				<p>Before I learned to code, I collaborated on a team of eight to create <a href="http://www.scms.org/">this</a> public-facing web site for Santa Cruz Montessori School. </p>
 				<p>We built an entirely new site from the ground up, organizing all the information you'd need to fall in love with the school and make a solid determination to send your kids there. It was a major undertaking.</p>
 				<p>(I also made the video on the bottom of the front page, <a class='youtube' href="http://www.youtube.com/watch?v=ND1FHC1TyUg">"Experience Family Work Day 2013."</a>)</p>
@@ -347,10 +347,23 @@
 		</div>
 
 		<div class='row'>
-			<!-- Next row, with Admin view page -->
-			<div class='col-md-4'>
-				<h4></h4>
-				<iframe width="300" height="225" src="//www.youtube.com/embed/cS1MOPNXNaQ?rel=0" frameborder="0" allowfullscreen></iframe>
+			<!-- Next row, The Wall on Rails -->
+			<div class='proj col-md-4'>
+				<a href="http://floating-fjord-6547.herokuapp.com/">
+					<img src="/assets/img/screenshot_wall.jpg" height='150px' style='border:1px solid blue'>
+					<p><em>Check out the Wall</em></p>
+				</a>
+			</div>
+			<div class='proj col-md-8'>
+				<p>This is a class exercise from the Dojo, building the basic functionality of a Facebook type page in Ruby on Rails – user login and reg, posting messages, and posting comments to the messages.</p>
+				<p>Feel free to use fake info to log in – I'm not using it for anything. And post me a message!</p>
+			</div>
+		</div>
+
+		<div class='row'>
+			<!-- Next row, Admin view page -->
+			<div class='proj col-md-4'>
+				<iframe width="250" height="187" src="//www.youtube.com/embed/cS1MOPNXNaQ?rel=0" frameborder="0" allowfullscreen></iframe>
 				<p><em>Press play above to see a demo</em></p>
 			</div>
 			<div class='proj col-md-8'>
