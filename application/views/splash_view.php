@@ -4,7 +4,7 @@
 	<meta charset='utf-8'>
 	<meta name='index' content='gregtennant contents directory'>
 
-	<title>Greg Tennant offline version</title>
+	<title>Greg Tennant, Web Dev</title>
 
 	<!-- Viewport meta tag to ensure proper rendering and touch zooming -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -226,15 +226,14 @@
 
 		<!-- Canvas for colored balls -->
 		<!-- (also Row with JS circles, PW generator, color clicker) -->
-		<div id='circlebox' height='500px'>
+		<div id='circlebox' height='500px' width='100%'>
 			<div class='row'>
 				
-			<svg id="svg" style='background-color:cyan;' height='15px' xmlns="http://www.w3.org/2000/svg"></svg>
+			<svg id="svg" style='background-color:cyan' height='15px' width='100%' xmlns="http://www.w3.org/2000/svg"></svg>
 			
-				<h2>Hi, nice to see you</h2>
 				<div id='intro'>
 					<p>I'm a full-stack web developer with a Black Belt certification from the <a href="http://codingdojo.com/">Coding Dojo</a> in Mountain View, California, where I built projects using HTML5, CSS3, Twitter Bootstrap, MySQL, MySQL Workbench, Version Control with Git and GitHub, PHP, OOP, CodeIgniter, jQuery, AJAX, Javascript, Node.js, Express, Socket.io, and Ruby on Rails.</p>
-					<p>I built this site in PHP/CodeIgniter with jQuery, AJAX and Javascript features. The <span class='triggerwords' id='trigger_color'>color items</span> I received as partly-built class exercises with errors to fix and incompletes to finish. The <span class='triggerwords' id='trigger_others'>others</span> I wrote from scratch.</p>
+					<p>I built this site myself, hand-coding the whole thing in PHP/CodeIgniter with jQuery, AJAX and Javascript features, making calls to a MySQL database. The <span class='triggerwords' id='trigger_color'>color items</span> I received as partly-built class exercises with errors to fix and incompletes to finish. The <span class='triggerwords' id='trigger_others'>others</span> I wrote from scratch.</p>
 				</div>
 					<p class='other'><em>• See the code for this entire page on GitHub at <a href="https://github.com/gjtennant/GTWebDemo"> https://github.com/gjtennant/GTWebDemo</a></em></p>
 
@@ -243,7 +242,7 @@
 				<div class='col-md-4'>
 					<div class='color'>
 						<h4>Fun with color</h4>
-						<a href="/projects/superwide">
+						<a href="/projects/superwide" target='_blank'>
 						<img src="/assets/img/superwide12.jpg" height='100px'>
 						<p><em>Javascript circles - click here!</em></p></a>
 						
@@ -259,7 +258,7 @@
 				<!-- Begin Random Password Generator -->
 				<div class='col-md-4'>
 					<div class='other'>
-						<h4>Random Password Generator <br><small>(feel free to use)</small></h4>
+						<h4>Random Password Generator <br><small>Suggesting hard-to-break passwords for you to use</small></h4>
 						<p>Spin #<span id='spinnumber'>1</span>:</p>
 
 						<h4 id='newpw'><?php echo $pw ?></h4>
@@ -379,12 +378,20 @@
 			<!-- Begin Ajax Remarks -->
 			<div class='col-md-12'>
 				<div class='other'>
-					<h4>Like to leave a remark?</h4>
+					<h4>Like to leave a remark? <small>Your comment will go into a MySQL database, and display below. You can delete it if you like.</small></h4>
 					<h4><small>{{140 - charcount.length}} characters</small></h4>
 
 					<form id='msgbox' action='/ajax_posts/create' method='post'>
 						<textarea id='inbox' name='description' rows='2' cols='70' ng-model='charcount'></textarea><br>
 						<input class='btn btn-success btn-xs' type='submit' name='remark' value='Post'>
+						<!-- The following block of code is invisible to humans and contains spam bot trap fields -->
+						<div style="display: none">
+							If you can read this, don't touch the following text fields. They're traps.<br>
+							<input type="text" name="address" value='http://'><br>
+							<input type="text" name="contact" value=''><br>
+							<textarea cols="40" rows="6" name="comment"></textarea>
+						</div>
+						<!-- End spam bot trap -->
 					</form>
 					<div id='tablebounder'>
 						<table class='table table-striped table-hover table-condensed'>
@@ -401,8 +408,6 @@
 								}
 							?>
 								<tr>
-									<!-- This used to be part of the echo above: -->
-									<!-- <td><span class='x'><a class='delx' href='/ajax_posts/delete?id={$key['id']}'>x</a></span></td> -->
 								</tr>
 							</tbody>
 						</table>

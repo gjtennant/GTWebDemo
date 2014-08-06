@@ -1,5 +1,5 @@
 <!doctype html>
-	<html lang='en'>
+<html lang='en'>
 	<head>
 		<meta name='Javascript Circles' content='Based on a Coding Dojo assignment by Michael Choi'>
 		<title>Javascript Circles</title>
@@ -7,11 +7,12 @@
 			body{ 
 				margin:0;
 				background-color: cyan;
+				height:100%;
 			}
 		</style>
 	</head>
 	<body>
-		<svg id="svg" xmlns="http://www.w3.org/2000/svg"></svg>
+		<svg id="svg" width='100%' height='100%' xmlns="http://www.w3.org/2000/svg"></svg>
 		<script>
 
 			// MAKING A NEW CIRCLE BASED ON MOUSEDOWN TIME

@@ -7,18 +7,25 @@ class Ajax_posts extends CI_Controller {
 		//add new record in the db and return JSON format results
 		$this->load->model('ajax_post');
 
-		$description = mysql_real_escape_string($this->input->post('description'));
+		if ($this->input->post('address') != 'http://' || $this->input->post('contact') != '' || $this->input->post('comment') != '') 
+		{
+			redirect(base_url('projects/index'));
+		} 
+		else 
+		{
+			$description = mysql_real_escape_string($this->input->post('description'));
 
-		 $ip_addr = $this->input->ip_address();
+			$ip_addr = $this->input->ip_address();
 
-		// send data
-		$data = array('description' => $description, 'ip_addr' => $ip_addr);
+			// send data
+			$data = array('description' => $description, 'ip_addr' => $ip_addr);
 
-		$this->ajax_post->add_note($data);
-		
-		$data['posts'] = $this->ajax_post->get_notes();
+			$this->ajax_post->add_note($data);
+			
+			$data['posts'] = $this->ajax_post->get_notes();
 
-		echo json_encode ($data['posts']);
+			echo json_encode ($data['posts']);
+		}
 
 	}
 
